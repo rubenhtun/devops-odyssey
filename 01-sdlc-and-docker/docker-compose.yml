@@ -1,0 +1,14 @@
+# Docker Compose file to set up a web application and a database
+services:
+  web:
+    build: .
+    ports:
+      - "3000:5000"
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
