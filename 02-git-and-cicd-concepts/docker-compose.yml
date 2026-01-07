@@ -1,0 +1,16 @@
+# Docker Compose file
+
+services:
+  web:
+    image: rubenhtun/devops-odyssey:v1.0
+    ports:
+      - "3000:5000"
+    environment:
+      - ENV_TYPE
+      - DB_HOST
+      - APP_COLOR
+
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=password
