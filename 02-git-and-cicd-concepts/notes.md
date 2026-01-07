@@ -1,6 +1,8 @@
 # Lesson 02: Git & CI/CD Concepts
 
-## Pipeline System Architecture
+## CI/CD Pipeline System Architecture
+
+![Pipeline Architecture](./assets/pipeline-diagram.svg)
 
 ### 1. Source Stage (Version Control)
 
