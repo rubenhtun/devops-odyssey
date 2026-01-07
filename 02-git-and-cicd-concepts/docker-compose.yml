@@ -13,4 +13,4 @@ services:
   db:
     image: postgres:latest
     environment:
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
