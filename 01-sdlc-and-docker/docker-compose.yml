@@ -10,5 +10,5 @@ services:
     image: postgres:latest
     environment:
       POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydatabase
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: devops_odyssey
