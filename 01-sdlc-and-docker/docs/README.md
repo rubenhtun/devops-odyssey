@@ -2,7 +2,7 @@
 
 ## 1. SDLC Flowchart
 
-![SDLC Flowchart](diagrams/sdlc-flowchart.png)
+![SDLC Flowchart](diagrams/sdlc-flowchart.svg)
 
 ## 2. Manual Docker Build & Run Workflow
 
@@ -20,8 +20,6 @@
 
 ## 5. Lesson Notes
 
-You can either **embed the content** or **link to nodes.md**:
-
 [View LESSON Notes](NOTES.md)
 
 ---
@@ -37,8 +35,17 @@ You can either **embed the content** or **link to nodes.md**:
 ```bash
 git clone https://github.com/rubenhtun/devops-odyssey.git
 cd devops-odyssey/01-sdlc-and-docker
+```
+
+```bash
 chmod +x deploy.sh
+```
+
+```bash
 ./deploy.sh
+```
+
+```bash
 # or
 bash deploy.sh
 ```
