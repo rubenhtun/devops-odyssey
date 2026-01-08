@@ -20,7 +20,7 @@
 
 ## 5. Lesson Notes
 
-[View LESSON Notes](NOTES.md)
+[View Lesson Notes](NOTES.md)
 
 ---
 
