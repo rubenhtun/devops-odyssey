@@ -2,7 +2,7 @@
 
 ## 1. SDLC Flowchart
 
-![SDLC Flowchart](diagrams/sdlc-flowchart.svg)
+![SDLC Flowchart](diagrams/sdlc-flowchart.png)
 
 ## 2. Manual Docker Build & Run Workflow
 
