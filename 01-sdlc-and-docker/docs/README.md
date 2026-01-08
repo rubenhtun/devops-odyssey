@@ -34,6 +34,9 @@
 
 ```bash
 git clone https://github.com/rubenhtun/devops-odyssey.git
+```
+
+```bash
 cd devops-odyssey/01-sdlc-and-docker
 ```
 
@@ -45,7 +48,9 @@ chmod +x deploy.sh
 ./deploy.sh
 ```
 
+### or
+
 ```bash
-# or
+
 bash deploy.sh
 ```
