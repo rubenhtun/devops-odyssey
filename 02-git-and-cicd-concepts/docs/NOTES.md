@@ -1,5 +1,47 @@
 # Lesson 02: Git & CI/CD Concepts
 
+## Shorthand Notes
+
+### 1. Source Stage
+
+- use version control such as git
+- push modified code to GitHub
+- manage git branches such as feature, develop, main
+
+### 2. Build Stage
+
+- pull all source code except from some restricted variables
+- create image like docker image
+- will solve environment problems
+
+### 3. Test Stage
+
+- make basic check on code pieces, functionalities
+- do unit tests
+- if found errors, fail sign will alert to developer
+- ensure for next CD section
+
+### 4. Publish Stage
+
+- publish docker image to somewhere, docker hub, nexus
+- be able to user already-created image any available time
+
+### 5. Staging Stage
+
+- do QA tests
+- make sure for actual production
+- it is called pre-production level though
+
+### 6. Production Stage
+
+- deliver to end users
+- so users access fully functioned app
+- blue-green deployment with minimal downtime
+
+---
+
+## Detailed CI/CD Pipeline Explanation
+
 ### 1. Source Stage (Version Control)
 
 - **Technical Breakdown:** Developers push **code changes** to a remote repository (GitHub) by creating **commits**.
