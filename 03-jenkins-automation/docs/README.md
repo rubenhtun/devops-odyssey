@@ -49,7 +49,7 @@ This diagram illustrates the continuous integration (CI) process on Jenkins, whi
 
 ## 7. How to Run Locally
 
-### Step 1: Create Job
+### Step 1: Create Freestyle Project
 
 - Click **New Item**
 - Enter name and select **Freestyle project**
@@ -81,3 +81,11 @@ docker --version
 - Click **Save**
 - Click **Build Now**
 - Check **Console Output** to verify the results.
+
+---
+
+## 8. Extra Tips
+
+- **Automated Builds:** To enable automatic builds, check the **Poll SCM** option in the build trigger section.
+- **Polling Schedule:** Add `* * * * *` in the **Schedule** field to instruct Jenkins to check GitHub every minute.
+- **Effect:** This ensures Jenkins automatically detects new commits, keeping the workspace and pipeline synchronized with the latest code changes.
