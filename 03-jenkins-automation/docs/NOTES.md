@@ -1,16 +1,45 @@
+# Jenkins & Docker Integration
+
 ## Shorthand Notes
 
-### 1. Building Jenkins Workspace
-- enter new item
-- select project type and ok
-- select Githud project and git
-- paste github repo link
-- branch is main
-- add some shells echo "--- Current Directory ---"
-pwd
-echo "--- Files in Workspace ---"
-ls -la
-echo "--- Testing Docker Access ---"
-docker --version in build steps and save
+### 1. Infrastructure
 
-finally build now
+- run Jenkins as a container for CI/CD automation
+- map `jenkins_home` volume for data persistence
+- use **root** user to prevent permission denied errors
+
+### 2. Docker-out-of-Docker (DooD)
+
+- mount `/var/run/docker.sock` to link Jenkins with Host Docker
+- Jenkins performs like a "Remote Control" for the host's Docker engine
+- install `docker.io` (CLI) inside Jenkins to send API requests
+
+### 3. Build Workflow
+
+- Jenkins pulls code into a dedicated **Workspace**
+- verify environment using `docker --version` shell command
+- trigger Host Docker to build and manage images
+
+---
+
+## Detailed Infrastructure Explanation
+
+### 1. The Controller (Jenkins Container)
+
+- **Technical Breakdown:** Deployed via `docker-compose` with port **8080** and volume mounting.
+- **Key Concept:** Provides an isolated environment for automation while keeping data safe on the host.
+
+### 2. Socket Communication (DooD Pattern)
+
+- **Technical Breakdown:** Connecting the host socket bypasses the need for "Docker-in-Docker" (DinD).
+- **Key Concept:** Direct communication between the Jenkins container and the Host Docker Daemon.
+
+### 3. API Translation (Docker CLI)
+
+- **Technical Breakdown:** The CLI inside Jenkins converts shell commands into **Docker API calls**.
+- **Key Concept:** Essential bridge to avoid `docker: not found` errors during builds.
+
+### 4. Build Validation
+
+- **Technical Breakdown:** Freestyle jobs automate the `git pull` and environment check.
+- **Key Concept:** Ensures the workspace is ready and the Docker engine is reachable before building images.

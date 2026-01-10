@@ -15,11 +15,13 @@ This project demonstrates setting up a Jenkins CI/CD pipeline using Docker conta
 ## 1. Jenkins Infrastructure Setup
 
 Through the infrastructure diagram below, we can understand how the Jenkins container communicates with our host OS.
+
 ![Jenkins Infrastructure](diagrams/jenkins-infrastructure.svg)
 
 ## 2. Docker-out-of-Docker (DooD) Sequence
 
 From within the Jenkins container, the Docker CLI sends API requests to the host's Docker daemon via a mounted socket.
+
 ![DooD Flow](diagrams/dood-communication-flow.svg)
 
 ## 3. Freestyle Job Workflow
@@ -33,7 +35,19 @@ This diagram illustrates the continuous integration (CI) process on Jenkins, whi
 
 ---
 
-## 5. How to Run Locally
+## 5. Lesson Notes
+
+[View Lesson Notes](NOTES.md)
+
+---
+
+## 6. Docker Cheatsheet
+
+[View Docker Sheets](DOCKER_CHEATSHEET.md)
+
+---
+
+## 7. How to Run Locally
 
 ### Step 1: Create Job
 
