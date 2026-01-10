@@ -59,7 +59,7 @@ This diagram illustrates the continuous integration (CI) process on Jenkins, whi
 
 - Go to **Source Code Management**
 - Select **Git**
-- Paste your **Repository URL**
+- Paste **Repository URL**
 - Set **Branch Specifier** to `*/main`
 
 ### Step 3: Configure Build Steps
