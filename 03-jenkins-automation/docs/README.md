@@ -41,9 +41,9 @@ This diagram illustrates the continuous integration (CI) process on Jenkins, whi
 
 ---
 
-## 6. Docker Cheatsheet
+## 6. Jenkins Lab Cheatsheet
 
-[View Docker Sheets](DOCKER_CHEATSHEET.md)
+[View Jenkins Lab Sheets](JENKINS_LAB.md)
 
 ---
 
