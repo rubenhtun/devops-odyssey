@@ -6,17 +6,17 @@
 
 - run Jenkins as a container for CI/CD automation
 - map `jenkins_home` volume for data persistence
-- use **root** user to prevent permission denied errors
+- use root user to prevent permission denied errors
 
 ### 2. Docker-out-of-Docker (DooD)
 
 - mount `/var/run/docker.sock` to link Jenkins with Host Docker
 - Jenkins performs like a "Remote Control" for the host's Docker engine
-- install `docker.io` (CLI) inside Jenkins to send API requests
+- install `docker.io` CLI inside Jenkins to send API requests
 
 ### 3. Build Workflow
 
-- Jenkins pulls code into a dedicated **Workspace**
+- Jenkins pulls code into a dedicated Workspace
 - verify environment using `docker --version` shell command
 - trigger Host Docker to build and manage images
 
