@@ -8,7 +8,7 @@
 - map `jenkins_home` volume for data persistence
 - use root user to prevent permission denied errors
 
-### 2. Docker-out-of-Docker (DooD)
+### 2. Docker-out-of-Docker
 
 - mount `/var/run/docker.sock` to link Jenkins with Host Docker
 - Jenkins performs like a "Remote Control" for the host's Docker engine
