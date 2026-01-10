@@ -56,7 +56,7 @@ docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword
 
 ### 5. Installing Docker CLI inside Jenkins
 
-တကယ်လို့ Jenkins container ဟာ Docker engine နဲ့ ချိတ်ဆက်ထားတာ မှန်ပေမယ့်လို့ သူ့အထဲမှာ `Docker CLI` ရှိမနေသေးဘူးဆိုရင် အောက််က command သုံးကြောင်းကို အစဉ်လိုက် ရိုက်ထည့်သွားရုံပါပဲ။
+တကယ်လို့ Jenkins container ဟာ Docker engine နဲ့ ချိတ်ဆက်ထားတာ မှန်ပေမယ့်လို့ သူ့အထဲမှာ `Docker CLI` ရှိမနေသေးဘူးဆိုရင် အောက််က command သုံးကြောင်းကို အစဉ်လိုက် ရိုက်ထည့်သွားရုံပါပဲ။ ဒီ command တွေ ကြိုမထည့်ခဲ့ဘူးဆိုရင် Jenkins dashboard မှာ Freestyle project တစ်ခု build လုပ်စဉ်အအတွင်းမှာပဲ `docker: not found` ဆိုတဲ့ error ကြုံကောင်းကြုံလာမှာ ဖြစ်ပါတယ််။
 
 ```bash
 docker exec -it -u root jenkins-server bash
