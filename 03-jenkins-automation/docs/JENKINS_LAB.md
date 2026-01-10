@@ -46,17 +46,17 @@ docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword
 
 ### 4. Initial Configuration
 
-![Unlock Jenkins](diagrams/unlock-jenkins.svg)
+![Unlock Jenkins](assets/unlock-jenkins.svg)
 
 ရလာတဲ့ password ကိုသုံးပြီး `Unlock` လုပ်ပြီးရင် ကျန်တာက `Install suggested plugins` ကို ရွေးပြီး `Git` နဲ့ `Pipeline` အတွက် လိုအပ်တဲ့ `plugins` တွေကို ဆက်ထည့်သွားဖို့ လိုပါတယ်။
 
-![Plugins Installation](diagrams/plugins-installation.svg)
+![Plugins Installation](assets/plugins-installation.svg)
 
 ဒီအထိပြီးပြီဆိုရင် Jenkins Server တစ်ခုကို အောင်အောင်မြင်မြင်နဲ့ setup လုပ်နိုင်ခဲ့ပါပြီ။
 
 ### 5. Installing Docker CLI inside Jenkins
 
-တကယ်လို့ Jenkins container ဟာ Docker engine နဲ့ ချိတ်ဆက်ထားတာ မှန်ပေမယ့်လို့ သူ့အထဲမှာ `Docker CLI` ရှိမနေသေးဘူးဆိုရင် အောက််က command သုံးကြောင်းကို အစဉ်လိုက် ရိုက်ထည့်သွားရုံပါပဲ။ ဒီ command တွေ ကြိုမထည့်ခဲ့ဘူးဆိုရင် Jenkins dashboard မှာ Freestyle project တစ်ခု build လုပ်စဉ်အအတွင်းမှာပဲ `docker: not found` ဆိုတဲ့ error ကြုံကောင်းကြုံလာမှာ ဖြစ်ပါတယ််။
+တကယ်တော့ Jenkins container ဟာ Docker engine နဲ့ ချိတ်ဆက်ထားတာ မှန်ပေမယ့်လို့ သူ့အထဲမှာ `Docker CLI` ရှိမနေသေးဘူးဆိုရင် အောက််က command သုံးကြောင်းကို အစဉ်လိုက် ရိုက်ထည့်သွားရုံပါပဲ။ ဒီ command တွေ ကြိုမထည့်ခဲ့ဘူးဆိုရင် Jenkins dashboard မှာ Freestyle project တစ်ခု build လုပ်စဉ်အအတွင်းမှာပဲ `docker: not found` ဆိုတဲ့ error ကြုံကောင်းကြုံလာမှာ ဖြစ်ပါတယ််။
 
 ```bash
 docker exec -it -u root jenkins-server bash
