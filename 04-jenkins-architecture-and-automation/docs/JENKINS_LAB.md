@@ -6,12 +6,10 @@
 ပထမဆုံးအနေနဲ့ terminal မှာ အောက်က command တွေကို သုံးပေးရမှာ ဖြစ်ပါတယ်။
 Docker Compose ဖိုင်ကတော့ Lesson 3 ကလို တူတူထားသွားမှာ ဖြစ်ပါတယ်။
 
-````bash
+```bash
 # ထုံးစံအတိုင်း container ကို စ run ဖို့ docker-compose ကို စမောင်းပေးရမှာ ဖြစ်ပါတယ်။
 docker-compose up -d
 
-
-```bash
 # Container ID မဟုတ် name ကို ကြည့်ဖို့လိုလာရင်။
 docker ps
 
@@ -20,7 +18,7 @@ docker exec -it <container_name> bash
 
 # root access ရပြီဆိုရင် ဒီ command သုံးပြီး Jenkins home directory ထဲ ဝင်လို့ရပါပြီ
 ls /var/jenkins_home
-````
+```
 
 ### 2. Jenkins Home Internal System
 
