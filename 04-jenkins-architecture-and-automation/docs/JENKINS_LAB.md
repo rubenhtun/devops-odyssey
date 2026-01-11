@@ -32,3 +32,19 @@ Home folder ထဲမှာတော့ internal files တွေ ကိုယ်
 - plugins/ folder : Jenkins မှာ သွင်းထားတဲ့ plugin ဖိုင်တွေ အတွက်ပါ။
 
 - workspace/ folder : Jenkins အနေအားဖြင့် GitHub ကနေ code တွေ ဆွဲချပြီး ယာယီ အလုပ်လုပ်တဲ့နေရာ ဖြစ်ပါတယ်။
+
+### 3. Advanced Job Setup
+
+ဒီ Lab မှာတော့ Freestyle job ကိုပဲ တချို့ manually set up လုပ်သွားရမှာ ဖြစ်ပါတယ်။
+
+- **Parameters:** Dynamic build လုပ်နိုင်ဖို့အတွက်ဆိုရင် `BRANCH_NAME` နဲ့ `ENV` တို့လို parameters တွေကို ကိုယ်တိုင် configure လုပ်ရမှာတွေ ရှိမှာဖြစ်ပါတယ်။
+- **Automation Trigger:** Lesson 3 မှာလို `Poll SCM` လိုဟာမျိုးကို အသုံးပြုပြီးတော့ `H/2 * * * *` နှစ်မိနစ်တစ်ခါ GitHub ဆီကို သွားပြီး code အသစ် push လုပ်ထားတာ ရှိမရှိ စစ်ဆေးခိုင်းထားလို့ ရပါတယ်။
+- **Git Integration:** Branch specifier နေရာမှာဆိုလည်း `${BRANCH_NAME}` ကို သုံးပြီး ကိုယ်စိတ်ကြိုက် branch ကို build လုပ်ရပါသေးတယ်။
+
+အပေါ်ကဟာတွေ သုံးလိုက်တော့ manually အလုပ်လုပ်ရမှာတွေလည်း အတိုင်းအတာတစ်ခုထိ လျော့သွားမှာ ဖြစ်ပါတယ်။
+
+### 4. Workspace Cleanup Strategy
+
+Build တစ်ခု ပြီးဆုံးတိုင်း workspace ထဲတွင် code များ ပုံမနေစေရန် Post-build step တွင် အောက်ပါအတိုင်း ရှင်းလင်းခဲ့သည်-
+`rm -rf *`
+_သတိပြုရန်: အရေးကြီးသော artifacts များကို အပြင်သို့ (S3 သို့မဟုတ် Docker Hub) အရင်ပို့ပြီးမှသာ ရှင်းလင်းသင့်သည်။_
