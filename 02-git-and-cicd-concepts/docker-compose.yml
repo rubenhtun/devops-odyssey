@@ -1,5 +1,4 @@
-# Docker Compose file
-
+# Docker Compose file to set up a web application and a PostgreSQL database
 services:
   web:
     image: rubenhtun/devops-odyssey:v1.0
