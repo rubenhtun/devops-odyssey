@@ -1,3 +1,5 @@
-![Jenkins Infrastructure](diagrams/automation-flow.svg)
+![Jenkins Infrastructure](diagrams/jenkins-internal-structure.svg)
 
-![Jenkins Infrastructure](diagrams/flow.svg)
+![Jenkins Infrastructure](diagrams/jenkins-distributed-architecture.svg)
+
+![Jenkins Infrastructure](diagrams/jenkins-distributed-architecture.svg)
