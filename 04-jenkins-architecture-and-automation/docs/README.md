@@ -2,4 +2,4 @@
 
 ![Jenkins Infrastructure](diagrams/jenkins-distributed-architecture.svg)
 
-![Jenkins Infrastructure](diagrams/jenkins-distributed-architecture.svg)
+![Jenkins Infrastructure](diagrams/jenkins-automation-workflow.svg)
