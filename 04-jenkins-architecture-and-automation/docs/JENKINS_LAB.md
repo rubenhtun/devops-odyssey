@@ -41,8 +41,6 @@ Home folder ထဲမှာတော့ internal files တွေ ကိုယ်
 - **Automation Trigger:** Lesson 3 မှာလို `Poll SCM` လိုဟာမျိုးကို အသုံးပြုပြီးတော့ `H/2 * * * *` နှစ်မိနစ်တစ်ခါ GitHub ဆီကို သွားပြီး code အသစ် push လုပ်ထားတာ ရှိမရှိ စစ်ဆေးခိုင်းထားလို့ ရပါတယ်။
 - **Git Integration:** Branch specifier နေရာမှာဆိုလည်း `${BRANCH_NAME}` ကို သုံးပြီး ကိုယ်စိတ်ကြိုက် branch ကို build လုပ်ရပါသေးတယ်။
 
-အပေါ်ကဟာတွေ သုံးလိုက်တော့ manually အလုပ်လုပ်ရမှာတွေလည်း အတိုင်းအတာတစ်ခုထိ လျော့သွားမှာ ဖြစ်ပါတယ်။
-
 ### 4. Workspace Cleanup Strategy
 
 Build တစ်ခု ပြီးဆုံးတိုင်း workspace ထဲတွင် code များ ပုံမနေစေရန် Post-build step တွင် အောက်ပါအတိုင်း ရှင်းလင်းခဲ့သည်-
