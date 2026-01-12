@@ -87,3 +87,9 @@ ls -la 04-jenkins-architecture-and-automation/
 
 echo "--- Build Process Completed Successfully ---"
 ```
+
+---
+
+Finally, we will see this kind of console output.
+
+![Console Output](assets/console-output.svg)
