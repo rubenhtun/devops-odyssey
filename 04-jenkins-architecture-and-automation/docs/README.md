@@ -92,4 +92,4 @@ echo "--- Build Process Completed Successfully ---"
 
 Finally, we will see this kind of console output.
 
-![Console Output](assets/console-output.svg)
+![Console Output](assets/console-output.png)
