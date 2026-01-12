@@ -58,7 +58,7 @@ docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword
 
 ![Plugins Installation](assets/plugins-installation.svg)
 
-ဒီအထိ ပြီးပြီးဆိုရင် Jenkins Server တစ်ခုကို အောင်အောင်မြင်မြင်နဲ့ setup လုပ်နိုင်ပါပြီ။
+ဒီအထိ ပြီးပြီးဆိုရင် Jenkins Server တစ်ခုကို အောင်အောင်မြင်မြင်နဲ့ setup လုပ်နိုင်ခဲ့ပါပြီ။
 
 ### 5. Installing Docker CLI inside Jenkins
 
