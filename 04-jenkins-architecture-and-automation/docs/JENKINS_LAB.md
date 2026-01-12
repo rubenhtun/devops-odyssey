@@ -41,7 +41,7 @@ ls /var/jenkins_home
 
 - **Automation Trigger:** `Lesson 3` မှာလို `Poll SCM` လိုဟာမျိုးကို အသုံးပြုပြီးတော့ `H/2 * * * *` နှစ်မိနစ်တစ်ခါ `GitHub` ဆီကို သွားပြီး code အသစ် push လုပ်ထားတာ ရှိမရှိ စစ်ဆေးခိုင်းထားလို့လည်း ရပါတယ်။
 
-- **Git Integration:** Branch specifier နေရာမှာဆိုလည်း `${BRANCH_NAME}` ကို သုံးပြီး ကိုယ်စိတ်ကြိုက် branch ကို build လုပ်ရပါသေးတယ်။
+- **Git Integration:** Branch specifier နေရာမှာဆိုလည်း အပေါ်ကသတ်မှတ်ထားခဲ့တဲ့ `${BRANCH_NAME}` ကို သုံးပြီး ကိုယ်စိတ်ကြိုက် branch ကို build လုပ်ရပါသေးတယ်။
 
 ### 4. Workspace Cleanup Strategy
 
