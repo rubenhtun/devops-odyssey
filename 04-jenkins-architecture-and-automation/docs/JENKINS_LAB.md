@@ -37,11 +37,13 @@ ls /var/jenkins_home
 
 ဒီ Lab မှာတော့ `Freestyle job` ကိုပဲ တချို့ manually configure လုပ်သွားရမှာ ဖြစ်ပါတယ်။ သက်ဆိုင်ရာ အပိုင်းသုံးပိုင်းလောက်ကိုပဲ အဓိကထားပြီး လုပ်သွားပါမယ်။
 
-- **Parameters:** Dynamic build လုပ်နိုင်ဖို့အတွက်ဆိုရင် `BRANCH_NAME` နဲ့ `ENV` တို့လို parameters တွေကို ကိုယ်တိုင် configure လုပ်ရမှာတွေ ရှိပါတယ်။
+- **Parameters:** Dynamic build လုပ်နိုင်ဖို့အတွက်ဆိုရင် `BRANCH_NAME` လိုမျိုး `ENV` တွေကို parameters အနေနဲ့ ကိုယ်တိုင် configure လုပ်ရမှာတွေ ရှိပါတယ်။
 
 - **Automation Trigger:** `Lesson 3` မှာလို `Poll SCM` လိုဟာမျိုးကို အသုံးပြုပြီးတော့ `H/2 * * * *` နှစ်မိနစ်တစ်ခါ `GitHub` ဆီကို သွားပြီး code အသစ် push လုပ်ထားတာ ရှိမရှိ စစ်ဆေးခိုင်းထားလို့လည်း ရပါတယ်။
 
-- **Git Integration:** Branch specifier နေရာမှာဆိုလည်း အပေါ်ကသတ်မှတ်ထားခဲ့တဲ့ `${BRANCH_NAME}` ကို သုံးပြီး ကိုယ်စိတ်ကြိုက် branch ကို build လုပ်ရပါသေးတယ်။
+- **Git Integration:** Branch specifier နေရာမှာဆိုလည်း အပေါ်ကသတ်မှတ်ထားခဲ့တဲ့ `${BRANCH_NAME}` ကို သုံးပြီး ကိုယ်စိတ်ကြိုက် branch ကို build လုပ်လို့ ရပါသေးတယ်။
+
+- **Build Steps:** ဒီ lab မှာတော့ `Dockerfile` မသုံးခဲ့တော့လို့ automation flow နဲ့ environment variables တွေ မှန်မမှန် စစ်ဆေးဖို့အတွက် ပုံမှန် `Execute shell` script လောက်ကိုပဲ အစမ််းသဘောအနေနဲ့ အသုံးပြုခဲ့ပါတယ်။
 
 ### 4. Workspace Cleanup Strategy
 

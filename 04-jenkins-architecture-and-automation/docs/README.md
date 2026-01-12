@@ -74,4 +74,16 @@ We can think of the Distributed Architecture as a "Brain and Hands" setup. The J
 ### Step 5: Build Steps
 
 1. Click **Add build step** and select **Execute shell**.
-2. Enter required build commands like `docker build -t app:${BUILD_NUMBER} .`
+2. Because we are not using a `Dockerfile` in this lab, we will use this `Execute shell` script for testing purpose.
+
+```bash
+echo "--- Starting Build Stage ---"
+echo "Building Project for Branch: ${BRANCH_NAME}"
+echo "Current Build Number: ${BUILD_NUMBER}"
+echo "Workspace Path: ${WORKSPACE}"
+
+# List contents of the project folder
+ls -la 04-jenkins-architecture-and-automation/
+
+echo "--- Build Process Completed Successfully ---"
+```
