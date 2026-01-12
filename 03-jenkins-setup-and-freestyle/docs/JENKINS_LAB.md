@@ -6,11 +6,17 @@
 
 - **File:** `docker-compose.yml`
 - **Key Configurations:**
+
   - Jenkins နောက်ဆုံး version ကို သုံးထားပါတယ်။
+
   - Container နာမည်ကိုလည်း jenkins-server လို့ ပေးထားပါတယ်။
+
   - တခြား permission တွေ ပြဿနာတက်တာမျိုး မဖြစ်ရအောင်ဆိုပြီး `privileged: true` အပြင် `root user` ပေးထားပါတယ်။
+
   - Port 8080 ကို ဖွင့်ထားတာက local host မှာ Jenkins Dashboard ကို တန်းကြည့်လို့ရအောင်ပါ။
+
   - `./jenkins_home` ကျရင်တော့ Jenkins ဟာ restart ဖြစ်သွားရင်တောင် သူနဲ့ဆိုင်တဲ့ ဒေတာတွေကို မပျောက်သွားရအောင် `Volume Mount` လုပ်ပေးထားတဲ့ သဘောပါ။
+
   - နောက်ပြီး Jenkins container အတွင်းကနေ ကိုယ့်ကွန်ပျူတာမှာ သွင်းထားတဲ့ `docker engine` ကို ထိန်းချုပ်ဖို့ လိုလာမှာ ဖြစ်တဲ့အတွက် `/var/run/docker.sock` ကို တွဲချိတ်ထားတာဖြစ်ပါတယ်။
 
 ### 2. Launching the Container
@@ -52,7 +58,7 @@ docker exec jenkins-server cat /var/jenkins_home/secrets/initialAdminPassword
 
 ![Plugins Installation](assets/plugins-installation.svg)
 
-ဒီအထိပြီးပြီဆိုရင် Jenkins Server တစ်ခုကို အောင်အောင်မြင်မြင်နဲ့ setup လုပ်နိုင်ခဲ့ပါပြီ။
+ဒီအထိ ပြီးပြီဆိုရင် Jenkins Server တစ်ခုကို အောင်အောင်မြင်မြင်နဲ့ setup လုပ်နိုင်ခဲ့ပါပြီ။
 
 ### 5. Installing Docker CLI inside Jenkins
 
