@@ -2,7 +2,7 @@
 
 ## Overview
 
-This module covers Git version control and CI/CD (Continuous Integration/Continuous Deployment) pipeline concepts using Docker. Learn how to automate software delivery pipelines from code commit to production deployment.
+This lab covers Git version control and CI/CD (Continuous Integration/Continuous Deployment) pipeline concepts using Docker. Learn how to automate software delivery pipelines from code commit to production deployment.
 
 ## Prerequisites
 

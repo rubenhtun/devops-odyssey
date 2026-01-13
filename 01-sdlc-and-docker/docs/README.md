@@ -2,9 +2,8 @@
 
 ## Overview
 
-This is a hands-on DevOps learning project demonstrating SDLC (Software Development Life Cycle)
-principles implemented through Docker containerization. The project provides practical examples
-of manual Docker workflows, automated scripting, and multi-service orchestration using Docker Compose.
+This is a practical DevOps learning lab demonstrating SDLC (Software Development Life Cycle)
+principles implemented through Docker containerization. The hands-on session provides working examples of manual Docker workflows, automated scripting, and multi-service orchestration using Docker Compose.
 
 ## Prerequisites
 
