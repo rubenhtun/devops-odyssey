@@ -35,7 +35,7 @@ ls /var/jenkins_home
 
 ### 3. Advanced Job Setup
 
-ဒီ Lab မှာတော့ `Freestyle job` ကိုပဲ တချို့ manually configure လုပ်သွားရမှာ ဖြစ်ပါတယ်။ သက်ဆိုင်ရာ အပိုင်းသုံးပိုင်းလောက်ကိုပဲ အဓိကထားပြီး လုပ်သွားပါမယ်။
+ဒီ Lab မှာတော့ `Freestyle job` ကိုပဲ တချို့ manually configure လုပ်သွားရမှာ ဖြစ်ပါတယ်။ သက်ဆိုင်ရာ အပိုင်းလေးပိုင်းလောက်ကိုပဲ အဓိကထားပြီး လုပ်သွားပါမယ်။
 
 - **Parameters:** Dynamic build လုပ်နိုင်ဖို့အတွက်ဆိုရင် `BRANCH_NAME` လိုမျိုး `ENV` တွေကို parameters အနေနဲ့ ကိုယ်တိုင် configure လုပ်ရမှာတွေ ရှိပါတယ်။
 
