@@ -22,9 +22,9 @@ This lab covers Git version control and CI/CD (Continuous Integration/Continuous
 
 ---
 
-## 3. Lesson Notes
+## 3. Lab Notes
 
-[View Lesson Notes](NOTES.md)
+[View Lab Notes](NOTES.md)
 
 ---
 

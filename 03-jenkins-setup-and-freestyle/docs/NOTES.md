@@ -1,4 +1,4 @@
-# Lesson 03: Jenkins & Docker Integration
+# Lab 03: Jenkins & Docker Integration
 
 ## Shorthand Notes
 

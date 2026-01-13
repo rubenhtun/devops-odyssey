@@ -1,4 +1,4 @@
-# Lesson 04: Jenkins Architecture And Automation
+# Lab 04: Jenkins Architecture And Automation
 
 ## Shorthand Notes
 

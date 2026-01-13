@@ -35,9 +35,9 @@ This diagram illustrates the continuous integration (CI) process on Jenkins, whi
 
 ---
 
-## 5. Lesson Notes
+## 5. Lab Notes
 
-[View Lesson Notes](NOTES.md)
+[View Lab Notes](NOTES.md)
 
 ---
 

@@ -1,4 +1,4 @@
-# Lesson 02: Git & CI/CD Concepts
+# Lab 02: Git & CI/CD Concepts
 
 ## Shorthand Notes
 

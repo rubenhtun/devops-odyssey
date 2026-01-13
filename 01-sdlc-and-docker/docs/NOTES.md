@@ -1,4 +1,4 @@
-# Lesson 01: SDLC & Docker Basics
+# Lab 01: SDLC & Docker Basics
 
 ### 1. SDLC Fundamentals
 

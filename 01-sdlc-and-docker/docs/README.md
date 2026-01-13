@@ -31,9 +31,9 @@ principles implemented through Docker containerization. The hands-on session pro
 
 ---
 
-## 5. Lesson Notes
+## 5. Lab Notes
 
-[View Lesson Notes](NOTES.md)
+[View Lab Notes](NOTES.md)
 
 ---
 

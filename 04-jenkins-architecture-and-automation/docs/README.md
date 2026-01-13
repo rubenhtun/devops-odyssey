@@ -6,7 +6,7 @@ This project demonstrates advanced Jenkins automation setup, focusing on CI/CD p
 
 ## Prerequisites
 
-- Docker and Docker Compose installed (as per Lesson 3).
+- Docker and Docker Compose installed (as per Lab 3).
 - Git installed with essential branches: `feature`, `develop`, and `main`.
 - Basic understanding of CI/CD concepts.
 
@@ -32,9 +32,9 @@ We can think of the Distributed Architecture as a "Brain and Hands" setup. The J
 
 ---
 
-## 4. Lesson Notes
+## 4. Lab Notes
 
-[View Lesson Notes](NOTES.md)
+[View Lab Notes](NOTES.md)
 
 ---
 
