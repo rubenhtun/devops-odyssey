@@ -1,5 +1,17 @@
 # Project Documentation
 
+## Overview
+
+This module covers Git version control and CI/CD (Continuous Integration/Continuous Deployment) pipeline concepts using Docker. Learn how to automate software delivery pipelines from code commit to production deployment.
+
+## Prerequisites
+
+- Docker and Docker Compose installed
+- Git installed and configured
+- Basic understanding of version control concepts
+
+---
+
 ## 1. Pipeline Architecture Overview
 
 ![Pipeline Architecture](diagrams/pipeline-architecture-flow.svg)

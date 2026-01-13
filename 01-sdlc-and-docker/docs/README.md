@@ -12,6 +12,8 @@ of manual Docker workflows, automated scripting, and multi-service orchestration
 - Git for version control and managing source code.
 - Basic Linux Knowledge, familiarity with terminal commands.
 
+---
+
 ## 1. SDLC Flowchart
 
 ![SDLC Flowchart](diagrams/sdlc-flowchart.svg)
