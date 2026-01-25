@@ -1,7 +1,5 @@
 # Jenkins to Docker Hub CI/CD Lab
 
----
-
 အတိုချုံး မိတ်ဆက်ရရင် ဒီ Lab ရဲ့ အဓိက ရည်ရွယ်ချက်ကတော့ **Python Flask app** လေးတစ်ခုကို **GitHub** ပေါ် တင်ပါမယ်။ **GitHub repo** မှာ **code changes** တစ်ခုခု ဖြစ်တာနဲ့ **Jenkins** ကနေ အလိုအလျောက် သိရပါမယ်။ **Jenkins** ထဲမှာ Project ကို **Build Now** လုပ်လိုက်တာနဲ့ image ကို တည်ဆောက်ပြီး **registry** ဖြစ်တဲ့ **Docker Hub** ပေါ်ကို **Docker image** အဖြစ် ပို့ပေးမှာ ဖြစ်ပါတယ်။ Build လုပ်လိုက်တိုင်းမှာ ထွက်လာတဲ့ image တွေက version မတူကြပါဘူး။ ဒါပေမယ့် **Jenkins** က နောက်ဆုံး version ကို သုံးပြီး ကိုယ့်ကွန်ပျူတာရဲ့ **localhost:5000** ပေါ်မှာ **container** အဖြစ် အလိုအလျောက် ပြန် deploy ပေးသွားမှာ ဖြစ်ပါတယ်။
 
 ---
