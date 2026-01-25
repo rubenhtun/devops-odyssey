@@ -22,7 +22,14 @@ def hello():
         <h1>Welcome to the DevOps Odyssey!</h1>
         <p>This application is running inside a Docker container.</p>
         <hr>
-        <p>Explore the journey of DevOps and containerization.</p>
+        <p>This lab primarily focuses on the following Jenkins configurations:</p>
+        <ul>
+            <li>Setting up credentials for Docker Hub.</li>
+            <li>Establishing a connection with a source code repository like GitHub.</li>
+            <li>Using Git for source code management with secure credentials.</li>
+            <li>Configuring environment variables using 'Secret Text' for DOCKER_USERNAME and DOCKER_PASSWORD.</li>
+            <li>Automating the build process using sequential execute shell scripts.</li>
+        </ul>
     </body>
     </html>
     """
