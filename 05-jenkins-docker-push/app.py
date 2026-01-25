@@ -16,6 +16,7 @@ def hello():
             }
             h1 { color: #333; }
             hr { margin: 20px 0; }
+            a { color: #0066cc; }
         </style>
     </head>
     <body>
@@ -30,10 +31,11 @@ def hello():
             <li>Configuring environment variables using 'Secret Text' for DOCKER_USERNAME and DOCKER_PASSWORD.</li>
             <li>Automating the build process using sequential execute shell scripts.</li>
         </ul>
+        <hr>
+        <p><strong>Source Code:</strong> <a href="https://github.com/rubenhtun/devops-odyssey/tree/main/05-jenkins-docker-push" target="_blank">View on GitHub</a></p>
     </body>
     </html>
     """
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-
