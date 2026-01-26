@@ -79,7 +79,7 @@ Unlike previous labs, Day 5 requires secure authentication to push images to Doc
 1. In the **Git** section, enter your **Repository URL**: `https://github.com/<GITHUB_USERNAME>/devops-odyssey.git`.
 2. Set the **Branch Specifier** to `*/main`.
 
-### Step 5: Build Steps (Execute Shell)
+### Step 4: Build Steps (Execute Shell)
 
 This is the core of the automation. We move from simple commands to a full Docker lifecycle.
 
