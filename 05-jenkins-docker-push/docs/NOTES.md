@@ -18,12 +18,15 @@ Learning how to set up a Jenkins pipeline that builds Docker images and pushes t
 ### Commands I Used
 
 ```bash
-# Login without exposing password
-echo $PASSWORD | docker login --username $USERNAME --password-stdin
+# Lab folder
+cd 05-jenkins-docker-push
 
 # Build and tag
 docker build -t <DOCKER_HUB_USERNAME>/<app-name>:${BUILD_NUMBER} .
 docker tag <DOCKER_HUB_USERNAME>/<app-name>:${BUILD_NUMBER} <DOCKER_HUB_USERNAME>/<app-name>:latest
+
+# Login without exposing password
+echo $PASSWORD | docker login --username $USERNAME --password-stdin
 
 # Push both versions
 docker push <DOCKER_HUB_USERNAME>/<app-name>:${BUILD_NUMBER}
