@@ -44,19 +44,19 @@
 cd 05-jenkins-docker-push
 
 # Build version နံပါတ်နဲ့ပါ တွဲပြီး Docker image build လုပ်တာပါ
-docker build -t rubenhtun/odyssey-flask-app:${BUILD_NUMBER} .
-docker build -t rubenhtun/odyssey-flask-app:latest .
+docker build -t rubenhtun/flask-app:${BUILD_NUMBER} .
+docker build -t rubenhtun/flask-app:latest .
 
 # Docker Hub login ဝင်တာပါ
 echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 
 # Image တွေကို Docker Hub ပေါ်ကို push လုပ်တာပါ
-docker push rubenhtun/odyssey-flask-app:${BUILD_NUMBER}
-docker push rubenhtun/odyssey-flask-app:latest
+docker push rubenhtun/flask-app:${BUILD_NUMBER}
+docker push rubenhtun/flask-app:latest
 
 # Container အဟောင်းကို ဖျက်ပြီး အသစ်ပြန်မောင်းတာပါ
-docker rm -f odyssey-flask-app || true
-docker run -d --name odyssey-flask-app -p 5000:5000 rubenhtun/odyssey-flask-app:latest
+docker rm -f flask-app || true
+docker run -d --name flask-app -p 5000:5000 rubenhtun/flask-app:latest
 ```
 
 ---
