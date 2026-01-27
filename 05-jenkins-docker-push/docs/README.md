@@ -16,7 +16,7 @@ This lab demonstrates how to make Jenkins automatically build Docker images, tag
 
 ## 1. CI/CD Docker Push Flow
 
-Think of GitHub as the blueprint office where our app plans are kept. Jenkins is the foreman who checks for updated blueprints every few minutes. When he finds new ones, his construction crew (the pipeline stages) builds a Docker "house" from those plans, tests it's solid, then stores it in the Docker Hub warehouse. Finally, the production neighborhood fetches the latest house and opens it for visitors at port 5000. Every code update triggers this whole automatic rebuild-and-replace cycle!
+Think of GitHub as the blueprint office where our app plans are kept. Jenkins is the site manager who checks for updated blueprints every few minutes. When he finds new ones, his construction crew (the pipeline stages) builds a Docker "house" from those plans, tests it's solid, then stores it in the Docker Hub warehouse. Finally, the production neighborhood fetches the latest house and opens it for visitors at port 5000. Every code update triggers this whole automatic rebuild-and-replace cycle!
 
 ![Docker Push Flow](diagrams/cicd-docker-push-flow.svg)
 
