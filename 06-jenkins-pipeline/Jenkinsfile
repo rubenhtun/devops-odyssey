@@ -43,9 +43,8 @@ pipeline {
         stage('Deploy Container') {
             steps {
                 echo "Deploying to Port 5000..."
-                // Remove old container if it exists
                 sh "docker rm -f ${APP_NAME} || true"
-                // Run the new one using your 5000:5000 mapping
+                // For simplicity, here I give container name same as app name
                 sh "docker run -d --name ${APP_NAME} -p 5000:5000 ${DOCKER_HUB_USERNAME}/${APP_NAME}:latest"
             }
         }
