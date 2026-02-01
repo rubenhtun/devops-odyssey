@@ -10,7 +10,7 @@ Learning how to set up a Jenkins pipeline that builds Docker images and pushes t
 
 ### Core Ideas
 
-- **Pipeline as Code**: Write the whole CI/CD process in a Jenkinsfile.
+- **Pipeline as Script**: Write the whole CI/CD process using shell commands.
 - **Tag Smart**: Use build numbers for tracking + "latest" for easy deployment.
 - **Keep Secrets Secret**: Use `--password-stdin` so passwords don't end up in logs.
 - **Clean Up**: Kill old containers before starting new ones.
@@ -40,10 +40,11 @@ docker run -d --name <CONTAINER_NAME> -p 5000:5000 <DOCKER_HUB_USERNAME>/<APP_NA
 ### My Setup
 
 - **Code Source**: GitHub repo, main branch
-- **Build Trigger**: Manual clicked "Build Now" in Jenkins
+- **Build Trigger**: Manually triggered using "Build Now" in Jenkins
 - **Registry**: Docker Hub
 - **Secrets**: Jenkins credential store, safer than hardcoding
 - **Port Setup**: Turned off Mac's AirPlay to free port 5000, then mapped host:5000 → container:5000
+
 - **Note**: Focused on manual builds to understand the pipeline mechanics without webhooks or polling SCM. In production, I can add webhooks for automatic triggering.
 
 ---
@@ -59,7 +60,7 @@ docker run -d --name <CONTAINER_NAME> -p 5000:5000 <DOCKER_HUB_USERNAME>/<APP_NA
 ### Step 2: Build the Pipeline Stages
 
 **Action**: Set up build → test → push → deploy steps.  
-**How**: Each stage runs in its own clean Docker container.  
+**How**: Each stage runs in a clean Jenkins workspace.
 **Why**: If something breaks early, it stops fast similarly in fail-fast principle.
 
 ### Step 3: Handle Passwords Safely
@@ -72,7 +73,7 @@ docker run -d --name <CONTAINER_NAME> -p 5000:5000 <DOCKER_HUB_USERNAME>/<APP_NA
 
 **Action**: Tagged with both build number AND "latest".  
 **How**: `${BUILD_NUMBER}` for version tracking, "latest" for easy reference.  
-**Why**: If something breaks, I can rollback to a previous build number.
+**Why**: If something breaks, I can roll back to a previous build number.
 
 ### Step 5: Deploy Cleanly
 
@@ -127,4 +128,4 @@ docker run -d --name <CONTAINER_NAME> -p 5000:5000 <DOCKER_HUB_USERNAME>/<APP_NA
 
 ### Pro Tip
 
-Always tag with build numbers in production—relying only on "latest" can get messy if you need to rollback.
+Always tag with build numbers in production—relying only on "latest" can get messy if you need to roll back.
