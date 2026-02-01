@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_HUB_CREDS = credentials('docker-hub-creds') // Jenkins credentials ID for Docker Hub, you can change it depending on your setup
+        DOCKER_HUB_USERNAME = "rubenhtun"
+        APP_NAME = "devops-odyssey-app"
+    }
+
+    stages {
+        stage('Cleanup Workspace') {
+            steps {
+                echo "Cleaning up old files..."
+                cleanWs()
+            }
+        }
+
+        stage('Checkout Source') {
+            steps {
+                echo "Checking out code from GitHub..."
+                checkout scm
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                dir('06-jenkins-pipeline') {
+                    echo "Building Image: ${DOCKER_HUB_USERNAME}/${APP_NAME}:${BUILD_NUMBER}"
+                    sh "docker build -t ${DOCKER_HUB_USERNAME}/${APP_NAME}:${BUILD_NUMBER} ."
+                    sh "docker tag ${DOCKER_HUB_USERNAME}/${APP_NAME}:${BUILD_NUMBER} ${DOCKER_HUB_USERNAME}/${APP_NAME}:latest"
+                }
+            }
+        }
+
+        stage('Login & Push to Docker Hub') {
+            steps {
+                sh "echo ${DOCKER_HUB_CREDS_PSW} | docker login -u ${DOCKER_HUB_CREDS_USR} --password-stdin"
+                sh "docker push ${DOCKER_HUB_USERNAME}/${APP_NAME}:${BUILD_NUMBER}"
+                sh "docker push ${DOCKER_HUB_USERNAME}/${APP_NAME}:latest"
+            }
+        }
+
+        stage('Deploy Container') {
+            steps {
+                echo "Deploying to Port 5000..."
+                // Remove old container if it exists
+                sh "docker rm -f ${APP_NAME} || true"
+                // Run the new one using your 5000:5000 mapping
+                sh "docker run -d --name ${APP_NAME} -p 5000:5000 ${DOCKER_HUB_USERNAME}/${APP_NAME}:latest"
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "Successfully deployed ${APP_NAME} build #${BUILD_NUMBER}!"
+        }
+        failure {
+            echo "Pipeline failed. Please check the Console Output."
+        }
+    }
+}
