@@ -34,7 +34,8 @@ pipeline {
 
         stage('Login & Push to Docker Hub') {
             steps {
-                sh "echo ${DOCKER_HUB_CREDS_PSW} | docker login -u ${DOCKER_HUB_CREDS_USR} --password-stdin"
+                echo "Logging in to Docker Hub and pushing image..."
+                sh 'echo ${DOCKER_HUB_CREDS_PSW} | docker login -u ${DOCKER_HUB_CREDS_USR} --password-stdin'
                 sh "docker push ${DOCKER_HUB_USERNAME}/${APP_NAME}:${BUILD_NUMBER}"
                 sh "docker push ${DOCKER_HUB_USERNAME}/${APP_NAME}:latest"
             }
