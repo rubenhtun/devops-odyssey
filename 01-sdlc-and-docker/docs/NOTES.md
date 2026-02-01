@@ -6,46 +6,29 @@ Noticeably, to understand that following the software development lifecycle with
 
 ---
 
-## Here's What I Actually Learned
+## Quick Cheat Sheet
 
-### 1. SDLC Fundamentals
+### Core Ideas
 
-- Learned the 8 stages: Requirements, Design, Development, Build, Test, Deploy, Operate, and Feedback.
-- Understanding the **Software Development Life Cycle** is the foundation for CI/CD automation.
-
-### 2. Programming Languages in DevOps
-
-- **Compiled (Java, Go):** Need to be built into artifacts before running.
-- **Interpreted (Python, Node.js):** Run directly via an interpreter but require specific runtime environments.
-
-### 3. Containerization (Docker)
-
-- **Dockerfile:** Used to define the environment, install dependencies, and package the application.
-- **Artifacts:** Created a portable Docker Image that contains everything the app needs to run.
-- **Container:** Actual running application of that image
-
-### 4. Orchestration & Networking (Docker Compose)
-
-- Used **Docker Compose** to manage multi-container setups.
-- Implemented **Virtual Networking** to allow the Web container and Database container (Postgres) to communicate.
-- Learned about **Port Mapping** (`3000:5000`) and **Environment Variables**.
-
----
+- **SDLC**: The 8-step journey from idea to working software
+- **Docker**: Packaging apps with their environment so they run anywhere
+- **Docker Compose**: Managing multiple containers that need to work together
+- **Port Mapping**: Connecting my computer to containers like doors between rooms
 
 ### Commands I Used
 
 ```bash
 # Stop existing container
-docker stop devops-odyssey-app || true
+docker stop <container-name> || true
 
 # Remove existing container
-docker rm devops-odyssey-app || true
+docker rm <container-name> || true
 
 # Build from Dockerfile
-docker build -t python-app .
+docker build -t <app-name> .
 
 # Run a container
-docker run -d --name devops-odyssey-app -p 3000:5000 python-app
+docker run -d --name <container-name> -p 3000:5000 <app-name>
 
 # Docker Compose magic
 docker-compose up -d
@@ -56,4 +39,45 @@ docker ps
 docker-compose ps
 ```
 
-**Bonus:** I automated all these commands in a `deploy.sh` script for easy reuse!
+### My Setup
+
+- **Tools**: Docker, Docker Compose, Git
+- **App**: Simple Flask Python application
+- **Database**: PostgreSQL for the multi-container part
+- **Automation**: Created `deploy.sh` script for one-click deployment
+
+## Here's What I Actually Did
+
+### Step 1: Understand SDLC (The Big Picture)
+
+**Action**: Learned the 8 stages of software development  
+**How**: From Requirements gathering to ongoing Operation and Feedback  
+**Why**: To understand what parts we're automating with DevOps tools
+
+### Step 2: Build My First Docker Container
+
+**Action**: Created a Dockerfile and built a Flask app image  
+**How**: Defined Python environment, installed Flask, packaged everything  
+**Why**: So my app runs the same everywhere and no more "works on my machine" issue
+
+### Step 3: Run & Manage Containers
+
+**Action**: Started containers, mapped ports, checked logs  
+**How**: Used `docker run`, `docker ps`, `docker logs` commands  
+**Why**: To actually use the containers I built and debug when needed
+
+### Step 4: Automate with Scripts
+
+**Action**: Created `deploy.sh` for one-click deployments  
+**How**: Combined multiple Docker commands into a single script  
+**Why**: Save time and avoid mistakes from typing commands manually
+
+### Step 5: Orchestrate with Docker Compose
+
+**Action**: Set up Flask app + PostgreSQL database together  
+**How**: Created `docker-compose.yml` with services and networks  
+**Why**: Real apps usually need multiple components working together
+
+---
+
+**Pro tip:** Check out the [Docker Cheatsheet](DOCKER_CHEATSHEET.md) if you forget any commands!
