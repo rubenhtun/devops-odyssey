@@ -20,10 +20,10 @@ def hello():
         </style>
     </head>
     <body>
-        <h1>Welcome to the DevOps Odyssey!</h1>
-        <p>This application is running inside a Docker container.</p>
+        <h1>Welcome to DevOps Odyssey - Lab 06</h1>
+        <p>This Jenkins Pipeline application is running inside a Docker container.</p>
         <hr>
-        <p>This lab primarily focuses on the following Jenkins pipeline steps:</p>
+        <p><strong>Lab 06: Jenkins Pipeline</strong> focuses on the following automation steps:</p>
         <ul>
             <li>Pulled source code from GitHub</li>
             <li>Created Docker image with build number tagging</li>
