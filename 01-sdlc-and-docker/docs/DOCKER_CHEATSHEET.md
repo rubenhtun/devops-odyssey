@@ -18,6 +18,7 @@ docker images
 # ကိုယ်ဖျက်ချင်တဲ့ image ကို image ID နဲ့ဖြစ်ဖြစ်၊ name နဲ့ဖြစ်ဖြစ် ဖျက်လို့ရပါတယ်။
 docker rmi <image_id_or_name>
 ```
+---
 
 ### 2. Container Lifecycle
 
@@ -48,6 +49,8 @@ docker start <container_id_or_name>
 docker rm <container_id_or_name>
 ```
 
+---
+
 ### 3. Inspection and Debugging
 
 ```bash
@@ -64,6 +67,8 @@ docker exec -it <container_id_or_name> /bin/bash
 # တစ်စုတစ်စည်းတည်း ကြည့်ဖို့လိုလာတဲ့အခါ 'inspect' command ကို မမေ့ဖို့ပါပဲ။
 docker inspect <container_id_or_name>
 ```
+
+---
 
 ### 4. System Maintenance
 
