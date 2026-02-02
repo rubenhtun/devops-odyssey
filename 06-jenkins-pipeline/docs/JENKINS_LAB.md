@@ -8,7 +8,7 @@
 
 ပထမဆုံးအနေနဲ့ **Docker Hub** ဆီကို image တွေ secure ဖြစ်ဖြစ် လှမ်းပို့ဖို့အတွက် credentials ကို Jenkins Credentials Store ထဲမှာ အရင်သိမ်းထားရပါမယ်။
 
-[!Jenkins Credentials Store](assets/jenkins-credentials-store.png)
+![Jenkins Credentials Store](assets/jenkins-credentials-store.png)
 
 - **Jenkins credentials:**
 - **Kind:** Username with password
