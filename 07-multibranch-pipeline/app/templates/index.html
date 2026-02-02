@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DevOps Odyssey</title>
+    <style>
+      body {
+        background-color: lightblue;
+        font-family: sans-serif;
+        padding: 50px;
+      }
+      h1 {
+        color: #333;
+      }
+      hr {
+        margin: 20px 0;
+      }
+      a {
+        color: #0066cc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to DevOps Odyssey - Lab 07</h1>
+    <p>This application is deployed via Jenkins Multibranch Pipeline.</p>
+
+    <div class="branch-info">
+      <p><strong>Current Branch:</strong> {{ branch_name }}</p>
+      <p><strong>Build ID:</strong> #{{ build_number }}</p>
+    </div>
+
+    <hr />
+    <p>
+      <strong>Lab 07: Multibranch Pipeline</strong> focuses on the following
+      automation steps:
+    </p>
+    <ul>
+      <li>Setting up a Multibranch Pipeline in Jenkins</li>
+      <li>Automating builds for multiple branches</li>
+      <li>Implementing branch-specific build strategies</li>
+    </ul>
+
+    <hr />
+    <p>
+      <strong>Source Code:</strong>
+      <a
+        href="https://github.com/rubenhtun/devops-odyssey/tree/main/07-multibranch-pipeline"
+        target="_blank"
+        >View on GitHub</a
+      >
+    </p>
+  </body>
+</html>
