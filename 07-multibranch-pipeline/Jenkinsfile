@@ -54,7 +54,7 @@ pipeline {
                     def PORT_MAP = [
                       'main': 5000,
                       'develop': 5001,
-                      'feature-login': 5002
+                      'feature': 5002
                     ]
 
                     def DEPLOY_PORT = PORT_MAP.get(env.BRANCH_NAME) ?: 5003
@@ -84,7 +84,8 @@ pipeline {
         }
         success {
             echo "Successfully deployed branch ${env.BRANCH_NAME}!"
-        } failure {
+        }
+        failure {
             echo "Pipeline failed. Please check the Console Output."
         }
     }
