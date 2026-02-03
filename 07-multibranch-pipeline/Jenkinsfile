@@ -1,0 +1,91 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_HUB_CREDS_ID = 'docker-hub-creds'
+        DOCKER_IMAGE = "rubenhtun/devops-odyssey-app"
+        IMAGE_TAG = "${BRANCH_NAME}-${BUILD_NUMBER}"
+    }
+
+    stages {
+        stage('Checkout Source') {
+            steps {
+                echo "Checking out code from GitHub..."
+                checkout scm
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    dir('07-multibranch-pipeline') {
+                        echo "Building Image: ${DOCKER_IMAGE}:${IMAGE_TAG}"
+                        sh "docker build -t ${DOCKER_IMAGE}:${IMAGE_TAG} ."
+                        sh "docker tag ${DOCKER_IMAGE}:${IMAGE_TAG} ${DOCKER_IMAGE}:latest"
+                    }
+                }
+            }
+        }
+
+        stage('Push to Docker Hub') {
+            steps {
+                echo "Logging in to Docker Hub and pushing image..."
+                script {
+                    withCredentials([usernamePassword(
+                      credentialsId: "${DOCKER_HUB_CREDS_ID}", 
+                      passwordVariable: 'DOCKER_HUB_PASSWORD', 
+                      usernameVariable: 'DOCKER_HUB_USERNAME'
+                      )]) {
+                        sh "echo \$DOCKER_HUB_PASSWORD | docker login -u \$DOCKER_HUB_USERNAME --password-stdin"
+                        sh "docker push ${DOCKER_IMAGE}:${IMAGE_TAG}"
+                        
+                        // To push 'latest' tag only for main branch
+                        if (env.BRANCH_NAME == 'main') {
+                            sh "docker push ${DOCKER_IMAGE}:latest"
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Deploy Container') {
+            steps {
+                script {
+                    def PORT_MAP = [
+                      'main': 5000,
+                      'develop': 5001,
+                      'feature': 5002
+                    ]
+
+                    def DEPLOY_PORT = PORT_MAP.get(env.BRANCH_NAME) ?: 5003
+
+                    echo "Deploying branch ${env.BRANCH_NAME} to Port ${DEPLOY_PORT}..."
+                    CONTAINER_NAME = "devops-odyssey-app-${BRANCH_NAME}"
+                    sh "docker rm -f ${CONTAINER_NAME} || true"
+                    
+                    // Here one more thing to note is that passing BRANCH_NAME and BUILD_NUMBER as environment variables to the container
+                    sh """
+                        docker run -d --name ${CONTAINER_NAME} \
+                        -p ${DEPLOY_PORT}:5000 \
+                        -e BRANCH_NAME=${env.BRANCH_NAME} \
+                        -e BUILD_NUMBER=${env.BUILD_NUMBER} \
+                        ${DOCKER_IMAGE}:${IMAGE_TAG}
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Cleaning up workspace and logging out from Docker Hub..."
+            sh "docker logout"
+            cleanWs()
+        }
+        success {
+            echo "Successfully deployed branch ${env.BRANCH_NAME}!"
+        } failure {
+            echo "Pipeline failed. Please check the Console Output."
+        }
+    }
+}
