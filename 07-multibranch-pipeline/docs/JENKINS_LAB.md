@@ -1,6 +1,6 @@
 # Jenkins Multibranch Pipeline
 
-ဒီ Lab 07 ရဲ့ အဓိက ရည်ရွယ်ချက်ကတော့ **Multibranch Pipeline** စနစ်ကို တည်ဆောက်ဖို့ပါ။ အရင် Lab 6 မှာတုန်းက `main` branch တစ်ခုတည်းကိုပဲ automation လုပ်ခဲ့တာပါ။ အခု Lab မှာတော့ GitHub ပေါ်မှာရှိတဲ့ **Branch အားလုံး (main, develop, feature-login)** ကို Jenkins က အလိုအလျောက် ရှာဖွေ indexing လုပ်ပြီး branch တစ်ခုချင်းစီအတွက် pipeline တစ်ခုစီကို အလိုအလျောက် တည်ဆောက်ပေးသွားမှာ ဖြစ်ပါတယ်။ ထူးခြားချက်အနေနဲ့တော့ branch နာမည်အလိုက် **Dynamic Port Mapping (5000, 5001, 5002)** ကိုသုံးပြီး ပြိုင်တူ deployment လုပ်သွားမှာ ဖြစ်ပါတယ်။
+Lab 07 မှာ အဓိကလုပ်ဆောင််သွားမှာကတော့ **Multibranch Pipeline** စနစ်ကို တည်ဆောက်ဖို့ပါ။ အရင် Lab 6 မှာတုန်းက `main` branch တစ်ခုတည်းကိုပဲ automation လုပ်ခဲ့တာပါ။ အခု Lab မှာတော့ GitHub ပေါ်မှာရှိတဲ့ **Branch အားလုံး (main, develop, feature-login)** ကို Jenkins က အလိုအလျောက် ရှာဖွေ indexing လုပ်ပြီး branch တစ်ခုချင်းစီအတွက် pipeline တစ်ခုစီကို အလိုအလျောက် တည်ဆောက်ပေးသွားမှာ ဖြစ်ပါတယ်။ ထူးခြားချက်အနေနဲ့တော့ branch နာမည်အလိုက် **Dynamic Port Mapping (5000, 5001, 5002)** ကိုသုံးပြီး ပြိုင်တူ deployment လုပ်သွားရမှာ ဖြစ်ပါတယ်။
 
 ---
 
@@ -14,16 +14,17 @@
 │   ├── app.py
 │   ├── requirements.txt
 │   └── templates/
+│       └── index.html
 ├── docs/
-│   ├── architecture.md
-│   ├── deployment.md
-│   ├── troubleshooting.md
+│   ├── README.md
+│   ├── NOTES.md
+│   ├── JENKINS_LAB.md
 │   └── diagrams/
 │       ├── pipeline-flow.svg
 │       └── infrastructure.svg
+├── .dockerignore
 ├── Dockerfile
-├── Jenkinsfile
-└── README.md
+└── Jenkinsfile
 ```
 
 ---
