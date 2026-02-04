@@ -1,0 +1,84 @@
+pipeline {
+    agent any
+
+    triggers {
+        githubPush()
+    }
+
+    environment {
+        DOCKER_IMAGE = "rubenhtun/devops-odyssey-app"
+    }
+
+    stages {
+        stage('Set Deploy Port') {
+            steps {
+                script {
+                    if (env.BRANCH_NAME == 'main') {
+                        env.DEPLOY_PORT = '5000'
+                    } else if (env.BRANCH_NAME == 'develop') {
+                        env.DEPLOY_PORT = '5001'
+                    } else {
+                        env.DEPLOY_PORT = '5002'
+                    }
+                    echo "Deploy Port set to ${env.DEPLOY_PORT} for branch ${env.BRANCH_NAME}."
+                }
+            }
+        }
+
+        stage('Cleanup Old Containers') {
+            steps {
+                echo "Cleaning up old containers..."
+                sh "docker ps -q --filter name=${env.BRANCH_NAME}-container | xargs -r docker stop 2>/dev/null || true"
+                sh "docker ps -a -q --filter name=${env.BRANCH_NAME}-container | xargs -r docker rm 2>/dev/null || true"
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                echo "Building Image: ${DOCKER_IMAGE}:${env.BRANCH_NAME}"
+                sh "docker build -t ${DOCKER_IMAGE}:${env.BRANCH_NAME} -f 08-webhooks-automation/Dockerfile ."
+            }
+        }
+
+        stage('Deploy Container') {
+            steps {
+                echo "Deploying branch ${env.BRANCH_NAME} to Port ${DEPLOY_PORT}..."
+
+                sh """
+                docker run -d \
+                    --name ${env.BRANCH_NAME}-container \
+                    -p ${DEPLOY_PORT}:5000 \
+                    -e BRANCH_NAME=${env.BRANCH_NAME} \
+                    -e BUILD_NUMBER=${env.BUILD_NUMBER} \
+                    ${DOCKER_IMAGE}:${env.BRANCH_NAME}
+                """
+            }
+        }
+
+        stage('Health Check') {
+            steps {
+                script {
+                    echo "Waiting for app to start..."
+                    sh "sleep 5"
+
+                    echo "Performing health check on port ${DEPLOY_PORT}..."
+                    sh "curl -f http://localhost:${DEPLOY_PORT}"
+                    echo "Health Check Passed! App is responding on port ${DEPLOY_PORT}"
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Cleaning up workspace..."
+            cleanWs()
+        }
+        success {
+            echo "Successfully deployed ${env.BRANCH_NAME} via Webhook on port ${DEPLOY_PORT}!"
+        }
+        failure {
+            echo "Deployment failed for ${env.BRANCH_NAME}. Check Docker logs."
+        }
+    }
+}
