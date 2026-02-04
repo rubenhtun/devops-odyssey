@@ -1,0 +1,17 @@
+# Git & Docker
+.git
+.dockerignore
+Jenkinsfile
+
+# Documentation
+docs/
+README.md
+*.md
+
+# Python Caches
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local System Files
+.DS_Store
