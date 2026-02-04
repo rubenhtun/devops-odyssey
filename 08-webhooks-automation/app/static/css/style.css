@@ -1,0 +1,32 @@
+body {
+  background-color: lightblue;
+  font-family: sans-serif;
+  padding: 50px;
+}
+h1 {
+  color: #333;
+}
+hr {
+  margin: 20px 0;
+}
+a {
+  color: #0066cc;
+}
+.branch-info {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.highlight {
+  color: #28a745;
+  font-weight: bold;
+}
+.status-green {
+  color: #28a745;
+  font-weight: bold;
+}
+.dashboard {
+  max-width: 800px;
+  margin: 0 auto;
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevOps Odyssey</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <h1>Welcome to DevOps Odyssey - Lab 08</h1>
+      <p>This application is deployed via GitHub Webhook.</p>
+
+      <div class="branch-info">
+        <p>
+          <strong>Current Branch:</strong>
+          <span class="highlight">{{ branch_name }}</span>
+        </p>
+        <p><strong>Build Number:</strong> #{{ build_num }}</p>
+        <p><strong>Container ID:</strong> {{ hostname }}</p>
+        <p>
+          <strong>System Status:</strong>
+          <span class="status-green">{{ status }}</span>
+        </p>
+      </div>
+
+      <hr />
+      <p>
+        <strong>Lab 08: GitHub Webhook Integration</strong> focuses on the
+        following automation steps:
+      </p>
+      <ul>
+        <li>Setting up GitHub Webhooks for automatic triggering</li>
+        <li>Connecting GitHub repositories to Jenkins pipelines</li>
+        <li>Implementing push-based CI/CD workflows</li>
+      </ul>
+
+      <hr />
+      <p>
+        <strong>Source Code:</strong>
+        <a
+          href="https://github.com/rubenhtun/devops-odyssey/tree/main/08-github-webhook"
+          target="_blank"
+          >View on GitHub</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
