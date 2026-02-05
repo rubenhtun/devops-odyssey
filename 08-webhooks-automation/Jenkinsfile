@@ -35,8 +35,12 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                echo "Building Image: ${DOCKER_IMAGE}:${env.BRANCH_NAME}"
-                sh "docker build -t ${DOCKER_IMAGE}:${env.BRANCH_NAME} -f 08-webhooks-automation/Dockerfile ."
+                script {
+                    dir('08-webhooks-automation') {
+                        echo "Building Image: ${DOCKER_IMAGE}:${env.BRANCH_NAME}"
+                        sh "docker build -t ${DOCKER_IMAGE}:${env.BRANCH_NAME} ."
+                    }
+                }
             }
         }
 
