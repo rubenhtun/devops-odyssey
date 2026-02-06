@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "--- Stopping existing container ---"
 docker stop devops-odyssey-app || true
