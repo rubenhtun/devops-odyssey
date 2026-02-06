@@ -35,4 +35,4 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD node health-check.js
+  CMD ["node", "static/js/health-check.js"]
