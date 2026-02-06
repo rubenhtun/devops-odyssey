@@ -18,6 +18,7 @@ docker images
 # ကိုယ်ဖျက်ချင်တဲ့ image ကို image ID နဲ့ဖြစ်ဖြစ်၊ name နဲ့ဖြစ်ဖြစ် ဖျက်လို့ရပါတယ်။
 docker rmi <image_id_or_name>
 ```
+
 ---
 
 ### 2. Container Lifecycle
@@ -74,7 +75,7 @@ docker inspect <container_id_or_name>
 
 ```bash
 # 'prune' ဆိုတာက မလိုတဲ့အပိုင်းတွေကို ဖယ်ရှားပစ်ဖို့အတွက်ပါ။
-# ဆိုလိုတာက လက်ရှိမှာ ဆက်မသုံးဖြစ််တော့တဲ့ stopped containers တွေ၊
+# ဆိုလိုတာက လက်ရှိမှာ ဆက်မသုံးဖြစ်တော့တဲ့ stopped containers တွေ၊
 # အသုံးမလိုတော့တဲ့ networks တွေ၊
 # dangling ဖြစ်တဲ့ images တွေလို မလိုအပ်တဲ့ Docker data အားလုံးကို
 # ဖယ်ရှားပစ်လိုက်တော့မယ်ဆိုတဲ့ သဘောပါ။
