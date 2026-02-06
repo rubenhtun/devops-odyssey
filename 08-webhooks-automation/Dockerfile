@@ -17,6 +17,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Final Stage
 FROM python:3.9-slim
 
+# This line installs Node.js in the final image.
+# Node.js is required to run the health-check.js script for performing health checks on the Flask application.
+RUN apt-get update && apt-get install -y nodejs && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 
 # This line copies the virtual environment from the builder stage to the final stage.
@@ -29,3 +33,6 @@ COPY app/ .
 EXPOSE 5000
 
 CMD ["python", "app.py"]
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+  CMD node health-check.js
