@@ -6,7 +6,7 @@ def hello():
     return """
     <html>
         <body style="background-color: lightblue; font-family: sans-serif; padding: 50px;">
-            <h1>Welcome to the DevOps Odyssey!</h1>
+            <h1>Welcome to DevOps Odyssey - Lab 01</h1>
             <p>This application is running inside a Docker container.</p>
             <hr>
             <p>This lab primarily focuses on software development lifecycle (SDLC) and containerization:</p>
