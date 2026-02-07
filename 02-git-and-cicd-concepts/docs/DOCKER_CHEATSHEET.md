@@ -1,4 +1,4 @@
-# Docker & CI/CD Practical Commands Cheatsheet
+# Docker & CI/CD Commands Cheatsheet
 
 ### 1. Building the Artifact
 
@@ -6,10 +6,11 @@
 # ဒီ command ကျတော့ application ကို run ဖို့လိုလာတဲ့အခါ environment တွေအကုန်ပါတဲ့
 # Docker Image (artifact) တစ်ခုကို တည်ဆောက်ပေးတာပါ။
 # Command မှာပါတဲ့ အစိတ်အပိုင်းတွေကို ထပ်ခွဲပြီးပြောရရင် username ကတော့ ကိုယ့်ရဲ့ Docker Hub username ပါ။
-# devops-odyssey ကတော့ Repository/App name ပါ။
+# devops-odyssey-app ကတော့ repository/app name ပါ။
+# Git ရဲ့ repository ထဲမှာ code versions အမျိုးမျိုးရှိသလို Docker မှာလည်း repository ထဲမှာ image versions (tags) အမျိုးမျိုးရှိပါတယ်။
 # v1.0 ကတော့ version နံပါတ််ပါ။
 # နောက်ဆုံး '.' ကတော့ လက်ရှိရောက်နေတဲ့ directory ကို ပြောတာဖြစ်ပါတယ်။
-docker build -t username/devops-odyssey:v1.0 .
+docker build -t username/devops-odyssey-app:v1.0 .
 ```
 
 ### 2. Publishing to Registry
@@ -20,7 +21,7 @@ docker build -t username/devops-odyssey:v1.0 .
 docker login
 
 # နောက််ဆုံး 'push' command ကိုသုံးပြီး image ကို upload လုပ်လိုက်တာပါ။
-docker push username/devops-odyssey:v1.0
+docker push username/devops-odyssey-app:v1.0
 ```
 
 ### 3. Running the Application (Deployment)
