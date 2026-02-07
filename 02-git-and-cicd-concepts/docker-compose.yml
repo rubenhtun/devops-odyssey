@@ -4,12 +4,14 @@ services:
     image: rubenhtun/devops-odyssey:v1.0
     ports:
       - "3000:5000"
+    volumes:
+      - ./:/app
     environment:
       - ENV_TYPE
       - DB_HOST
       - APP_COLOR
 
   db:
-    image: postgres:latest
+    image: postgres:15-alpine
     environment:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
