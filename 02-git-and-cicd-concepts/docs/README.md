@@ -24,7 +24,7 @@ So what does a typical CI/CD pipeline actually look like? Personally, I was tota
 
 No matter what you push to the Git repository, whether it's spaghetti code or refactored code, the pipeline workflow automatically knows that it's time to start again. Simply, think of it like a chain of security checkpoints along a highway in Burma. Only when succeeded at one checkpoint, you are allowed to move forward to the next destination. Right?
 
-The CI/CD pipeline also detects your pushed code first, then pulls the latest updated code and builds a Docker image from it. After that, it will execute any automated tests, and if everything passes, we will reach the deployment stage for production. So, the main thing is each step depends on the previous one succeeding, kind of like a domino effect. If anything breaks at any point, the whole pipeline stops and alerts you the failure because broken code and unstable systems should never be allowed to reach end users.
+The CI/CD pipeline also detects your pushed code first, then pulls the latest updated code and builds a Docker image from it. After that, it will execute any automated tests, and if remaining aspects pass, we will reach the deployment stage for production. So, the main thing is each step depends on the previous one succeeding, kind of like a domino effect. If anything breaks at any point, the whole pipeline stops and alerts you the failure because broken code and unstable systems should never be allowed to reach end users.
 
 ![Pipeline Architecture](diagrams/pipeline-architecture-flow.svg)
 
