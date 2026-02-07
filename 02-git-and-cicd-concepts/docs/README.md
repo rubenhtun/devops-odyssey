@@ -6,7 +6,7 @@ Alright, so here's the thing. If we reflect back in Lab 01, we learned how to bu
 
 This is why Git and CI/CD concepts come into play. I rather say that Git is actually our **source control team manager** who can track of every single change we make to our codebase. So, how about CI/CD? It's like an **automated assembly line** that takes all our code changes and regularly builds, tests, and deploys them without us having to manually type commands over and over again.
 
-In this lab, we're learning how Git and CI/CD work conceptually with just flow diagrams, not abosolute practically because I just added some few lines of Docker Compose. However, we should know in advance CI/CD orchestrates this beautiful automation before jumping into upcoming labs. From the moment you `git push` new code changes, a pipeline awakens himself impulsively: it fetches your changes, builds a Docker container, runs tests, and deploys it to your environment. No manual intervention needed anymore.
+In this lab, we're learning how Git and CI/CD work conceptually with just flow diagrams, not abosolute practically because I just added some additional lines of Docker Compose and commands. However, we should know in advance CI/CD orchestrates this beautiful automation before jumping into upcoming labs. From the moment you `git push` new code changes, a pipeline awakens himself impulsively: it fetches your changes, builds a Docker container, runs tests, and deploys it to your environment. No manual intervention needed anymore.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ Let's keep diving into the CI/CD pipeline aspects when Docker is actually involv
 
 Similar to the above overall illustration, when our codebase gets committed and pushed, the CI/CD system enters action. It doesn't use a pre-built image. Instead, it builds a fresh Docker image from your specified Dockerfile using the latest code each time.
 
-This is super important as it ensures the container always has the newest version of the application. After assembling with all needed stuff, the system starts a container from this new image in the target environment, accessible by users.
+This is so important as it ensures the container always has the newest version of the application. After assembling with all needed stuff, the system starts a container from this new image in the target environment in order to be accessible by users.
 
 But the ongoing process is still there to monitoring any health checks of the app. And if everything looks good, the container will be allowed to keep running while stopping the old one. This way makes your app always be up to date without any manual effort.
 
