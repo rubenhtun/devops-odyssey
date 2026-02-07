@@ -1,6 +1,7 @@
 # Docker Compose file to set up a web application and a PostgreSQL database
 services:
   web:
+    build: .
     image: rubenhtun/devops-odyssey-app:v1.0
     ports:
       - "3000:5000"
