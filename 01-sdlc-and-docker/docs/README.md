@@ -25,7 +25,7 @@ We can easily think of SDLC like a simple sequential process from developing sof
 
 ## 2. Manual Docker Build & Run Workflow
 
-So next what exactly happens when we run `docker build` and `docker run` in the local terminal? Here, we can think of it like building crafted Lego toys. First, we need a base image as our foundation like a Lego baseplate. The same applies in this workflow either. We download essential environment parts of an app including base image, namely like `python:3.9-slim`, then add layers by installing dependencies from `requirements.txt` file, and finally finally assemble everything into a runnable container on our local machine.
+So next what exactly happens when we run `docker build` and `docker run` in the local terminal? Here, we can think of it like building crafted Lego toys. First, we need a base image as our foundation like a Lego baseplate. The same applies in this workflow either. We download essential environment parts of an app including base image, namely like `python:3.9-slim`, then add layers by installing dependencies from `requirements.txt` file, and finally assemble everything into a runnable container on our local machine.
 
 ![Manual Docker Build & Run](diagrams/docker-manual-build-run-flow.svg)
 
@@ -43,7 +43,7 @@ It's like having a personal assistant for deployments! Lol!!!
 
 ## 4. Docker Compose Multi-Service Workflow
 
-In software development, almost every single isolated service cannot exist on its own. Contrary to this, at least, they rely on essential services, much like living in a union. In the same way, our app also needs other friends, such like a database, to work together. Here, `Docker Compose` becomes the team manager triggers for collaboration among them.
+In software development, almost every single isolated service cannot exist on its own. Contrary to this, at least, they have to rely on other essential services, much like living in a union. In the same way, our app also needs other friends, such like a database, to work together. Here, `Docker Compose` becomes the team manager triggers shared collaboration among them.
 
 Thus, this diagram highlights how it coordinates the web app and database, sets up a core relationship through private networks, and ensures they can communicate with each other based on their respective requirements.
 
