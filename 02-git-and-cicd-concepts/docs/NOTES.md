@@ -1,73 +1,73 @@
 # Lab 02: Git & CI/CD Concepts
 
-## Shorthand Notes
+## What This Lab Is About
 
-### 1. Source Stage
+First of all, I consider the "curious coder" phrase would be dominant rather than "happy coder" in the earlier software development industry. In this lab too, my dedication goes on seriously through deep focus to fully understand.
 
-- use version control such as git
-- push modified code to GitHub
-- manage git branches such as feature, develop, main
+So when building on what I learned before Lab 1 about Docker, I realized something crucial in my mind - actually, packaging our code into related containers is just half of the journey. The real magic happens only when we automate the entire software delivery process. Therefore, I think that's where CI/CD comes in.
 
-### 2. Build Stage
+One more reminder is that there will be new advanced technologies leading the DevOps industry now. But I guarantee that all former developers are who already knew and used to Git and CI/CD. The reason why is that its underlying technology is pretty cool. Because of them, you are able to collaborate with other developers smoothly, catch bugs joyfully lol, and deliver features reliably.
 
-- pull all source code except from some restricted variables
-- create image like docker image
-- will solve environment problems
-
-### 3. Test Stage
-
-- make basic check on code pieces, functionalities
-- do unit tests
-- if found errors, fail sign will alert to developer
-- ensure for next CD section
-
-### 4. Publish Stage
-
-- publish docker image to somewhere, docker hub, nexus
-- be able to user already-created image any available time
-
-### 5. Staging Stage
-
-- do QA tests
-- make sure for actual production
-- it is called pre-production level though
-
-### 6. Production Stage
-
-- deliver to end users
-- so users access fully functioned app
-- blue-green deployment with minimal downtime
+Overall, my understanding this flow, combined with multiple automated stages, helps me appreciate why DevOps exists and its big impact on software development. Meanwhile, teamwork problems, namely coordinating deployments, preventing broken code from reaching users, and maintaining consistency across environments, are mostly handled by DevOps engineers.
 
 ---
 
-## Detailed CI/CD Pipeline Explanation
+## Quick Cheat Sheet
 
-### 1. Source Stage (Version Control)
+### Core Ideas
 
-- **Technical Breakdown:** Developers push **code changes** to a remote repository (GitHub) by creating **commits**.
-- **Key Concept:** This stage manages different **branches** (Feature, Develop, Main), allowing teams to work on multiple features simultaneously for even a small application.
+- **Git**: Version control system that tracks code changes and allows teams to work on different features without over stepping on each other's jobs.
+- **CI/CD**: Continuous Integration for automated testing and building and Continuous Deployment for automated release, also defined as the backbone of modern software delivery.
+- **Pipeline**: A series of automated stages that all pushed codes go through from development to production.
+- **Artifact**: A finally compiled, tested, and packaged version of our code for sure like a Docker image that's ready for deployment.
 
-### 2. Build Stage (Continuous Integration)
+---
 
-- **Technical Breakdown:** **Jenkins**, acting as the **Automation Orchestrator**, pulls the source code and builds a **Docker Image**.
-- **Key Concept:** This creates a **portable artifact** that ensures consistency across different environments, effectively solving the "it works on my machine" problem caused by mismatched dependencies.
+### Commands I Used
 
-### 3. Test Stage (Continuous Inspection)
+```bash
+# Git basics for this lab
+git add .
+git commit -m "message"
+git push origin main
+git checkout -b feature/branch-name
 
-- **Technical Breakdown:** **Automated Unit Tests** are executed to verify the code logic.
-- **Key Concept:** Tools like **SonarQube** perform **Static Code Analysis** to identify bugs, security vulnerabilities, code smells, and hotspots, ensuring high **code quality** before moving forward.
+# Check repository status
+git status
+git log --oneline
 
-### 4. Publish Stage (Artifact Management)
+# Branch management
+git branch -a
+git merge feature/branch-name
+```
 
-- **Technical Breakdown:** Successfully built and tested Docker images are pushed to an **Artifact Repository** or **Container Registry**.
-- **Key Concept:** Popular choices include **Docker Hub**, **Nexus**, or **JFrog Artifactory**. This stage ensures that only "proven" images are stored for deployment.
+---
 
-### 5. Staging Stage (Pre-production Environment)
+### My Setup
 
-- **Technical Breakdown:** Before reaching end-users, the application is deployed to a **Staging Environment** (or QA Environment) that mirrors the production setup.
-- **Key Concept:** This stage is used for **User Acceptance Testing (UAT)** and final Quality Assurance (QA) to ensure everything runs correctly on a live server.
+- **Version Control**: Git with GitHub
+- **App**: Flask Python application
+- **Container Registry**: Docker Hub for storing images
+- **Branching Strategy**: Feature branches → Develop → Main
 
-### 6. Production Stage (Continuous Deployment/Delivery)
+---
 
-- **Technical Breakdown:** The final, **robust** application is deployed to the **Production Environment** for end-user access.
-- **Key Concept:** Depending on the strategy (e.g., Blue-Green or Rolling Update), this stage delivers the value to the customers with high availability and minimal downtime.
+## Here's What I Actually Did
+
+### Stage 1: Understanding Version Control & Branching
+
+**Action**: Explored how Git manages code versions and enables team collaboration.
+**How**: Created different branches sucha as feature-login, develop, main and understood the workflow of pushing code and creating pull requests.  
+**Why**: Multiple developers need to work on different features simultaneously without breaking the main codebase. So Git branches isolate work to developers and merging is the final step after testing.
+
+### Stage 2: Setting Up the CI/CD Pipeline Foundation
+
+**Action**: Learned the six stages of a complete CI/CD pipeline.  
+**How**: Mapped out the flow from Source → Build → Test → Publish → Staging → Production.  
+**Why**: Every stage has a purpose. Automating these stages catches issues early and ensures consistent deployments.
+
+### Stage 3: Source Stage (Version Control)
+
+**Action**: Developers push code changes to GitHub using Git commits with intended messages.  
+**How**: Code travels from local machine → GitHub repository through branches like feature-login, develop and main.
+**Why**: This records all code changes along the way of development. Teams can review back messy or clean code before it's merged to main.
