@@ -1,4 +1,4 @@
-# Docker & CI/CD Commands Cheatsheet
+# 🐳 Docker & CI/CD Commands Cheatsheet
 
 ### 1. Building the Artifact
 
