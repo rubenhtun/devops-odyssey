@@ -19,7 +19,7 @@ So, I think this is defined as Docker-out-of-Docker, because Jenkins uses the ho
 ### Core Ideas
 
 - **Jenkins**: An automation server that works for scheduled jobs planned across the entire CI/CD pipeline on time.
-- **Docker-out-of-Docker (DooD)**: A well drawn relationship between local host's Docker daemon of specific Jenkins container, no more new building of Docker inside Jenkins itself.
+- **Docker-out-of-Docker (DooD)**: A well-drawn relationship between local host's Docker daemon of specific Jenkins container, no more new building of Docker inside Jenkins itself.
 - **Socket Mount**: The `/var/run/docker.sock` file is a medium communicator to bridge between containers and Docker daemon locating in the host.
 - **Freestyle Job**: A traditional Jenkins job in which shell commands and some configurations can be managed ahead. And it will sequentially run passing green mark testing stages.
 - **Build Workspace**: An isolated directory in any local folder where Jenkins clones all code and executes build commands.
@@ -62,7 +62,7 @@ docker --version
 
 ## Here's What I Actually Did
 
-### Stage 1: Understanding the Fist Problem
+### Stage 1: Understanding the First Problem
 
 **Action**: Tried to realize how Jenkins in a container builds other Docker containers without having its own Docker Engine.
 **How**: Brainstorming question here is: if the heavy Docker Engine gets already stuck inside every Jenkins container, how can Jenkins, itself a Docker container easily build upcoming containers? Obviously, the next coming containers will also need Docker Engine. So it sounds like "Docker-in-Docker". The side effect is complexity and heavy resource usage.
@@ -110,7 +110,7 @@ docker --version
 
 ## My "LOL-JOY" Moment
 
-Honestly say that Docker-out-of-Docker (DooD) pattern seemed confusing at first. Step by step understanding it, my view became clear about it. For example, the `/var/run/docker.sock` can be metaphorically imagined as a two-way telephone line between the Jenkins container and the host's Docker daemon to communicate each other. By mounting this socket only, Jenkins gains the ability to:
+Honestly say that Docker-out-of-Docker (DooD) pattern seemed confusing at first. Step by step understanding it, my view became clear about it. For example, the `/var/run/docker.sock` can be metaphorically imagined as a two-way telephone line between the Jenkins container and the host's Docker daemon to communicate with each other. By mounting this socket only, Jenkins gains the ability to:
 
 - Check Docker status
 - Build Docker images
