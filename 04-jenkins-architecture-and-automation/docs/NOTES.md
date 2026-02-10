@@ -72,8 +72,8 @@ Why: Sometimes breaking and taking apart something to detect what inner it is co
 ### Stage 2: Understanding Distributed Architecture
 
 Action: Learned the "Brain and Hands" model of Jenkins infrastructure.
-How: Studied how the Jenkins controller, brain orchestrates builds while agent nodes, hands execute the actual work.
-Why: Here, my opinion is that managing a big job with separate delegations is a smarter way than being a solo workaholic. Dividing delegations is brilliant for scalability and resource management, right? If only the controller had to run every build itself, it would quickly become overwhelmed and crash. By delegating heavy tasks to multiple agents, the controller will become calm, responsive, and can manage multiple concurrent builds. On the other hand, each agent will maintain its own isolated workspace, preventing build conflicts. This architecture also allows horizontal scaling, just add more agent nodes as my project grows. 
+How: Studied how the Jenkins Controller, brain orchestrates builds while Agent Nodes, hands execute the actual work.
+Why: Here, my opinion is that managing a big job with separate delegations is a smarter way than being a solo workaholic. Dividing delegations is brilliant for scalability and resource management, right? If only the controller had to run every build itself, it would quickly become overwhelmed and crash. By delegating heavy tasks to multiple agents, the controller will become calm, responsive, and can manage multiple concurrent builds. On the other hand, each agent will maintain its own isolated workspace, preventing build conflicts. This architecture also allows horizontal scaling, just add more Agent Nodes as my project grows. 
 
 ### Stage 3: Setting Up Parameterized Builds
 
