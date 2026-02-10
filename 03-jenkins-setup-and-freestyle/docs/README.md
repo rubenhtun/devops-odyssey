@@ -18,16 +18,22 @@ As we see, the developer must communicate with the host machine os to see the Je
 
 ![Jenkins Infrastructure](diagrams/jenkins-infrastructure.svg)
 
+---
+
 ## 2. Docker-out-of-Docker (DooD) Sequence
 
 Next step, going into details a bit, the Docker CLI from within the Jenkins container sends API requests to the host's Docker daemon via a mounted socket. Like already explained before, socker two-way communicator serves as a medium catalyst to forward Docker Daemon, where main executions occur, and backward Docker CLI to show final results.
 
 ![DooD Flow](diagrams/dood-communication-flow.svg)
 
+---
+
 ## 3. Freestyle Job Workflow
 
 Be brave for repetitions. And be brave for the little unknown. Now our focus is on how Jenkins actually does the work. When we trigger a tangible click on the "build" button, the autopilot, Jenkins make auto awakening of a freestyle job. First step, reach out to there, GitHub to pull all the latest source code into its workspace and download it. After that, Jenkins starts multiple remaining build steps as configured in the job. The steps include running tests, compiling code, building a Docker image, push image to Docker Hub, and so on. Finally, it cleans up workspace for the next build and sends notifications to the developer.
 ![Build Workflow](diagrams/freestyle-job-workflow.svg)
+
+---
 
 ## 4. CI/CD Pipeline Roadmap
 
