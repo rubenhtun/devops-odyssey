@@ -20,6 +20,8 @@ docker exec -it <container_name> bash
 ls /var/jenkins_home
 ```
 
+---
+
 ### 2. Jenkins Home Structure
 
 `Jenkins` home folder ထဲမှာတော့ internal files တွေ ကိုယ်စီရှိနေတာကို တွေ့ရမှာပဲ ဖြစ်ပါတယ်။
@@ -33,6 +35,8 @@ ls /var/jenkins_home
 
 - **`workspace/`** : `Jenkins` ရဲ့ ပုံမှန်လုပ်ဆောင်ပုံအရဆိုရင် `GitHub` ကနေ code တွေ ဆွဲချပြီး ယာယီ အလုပ်လုပ်တဲ့နေရာ ဖြစ်ပါတယ်။
 
+---
+
 ### 3. Advanced Job Setup
 
 ဒီ Lab မှာတော့ `Freestyle job` ကိုပဲ တချို့ manually configure လုပ်သွားရမှာ ဖြစ်ပါတယ်။ သက်ဆိုင်ရာ အပိုင်းလေးပိုင်းလောက်ကိုပဲ အဓိကထားပြီး လုပ်သွားပါမယ်။
@@ -44,6 +48,8 @@ ls /var/jenkins_home
 - **Git Integration:** Branch specifier နေရာမှာဆိုလည်း အပေါ်ကသတ်မှတ်ထားခဲ့တဲ့ `${BRANCH_NAME}` ကို သုံးပြီး ကိုယ်စိတ်ကြိုက် branch ကို build လုပ်လို့ ရပါသေးတယ်။
 
 - **Build Steps:** ဒီ lab မှာတော့ `Dockerfile` မသုံးခဲ့တော့လို့ automation flow နဲ့ environment variables တွေ မှန်မမှန် စစ်ဆေးဖို့အတွက် ပုံမှန် `Execute shell` script လောက်ကိုပဲ အစမ််းသဘောအနေနဲ့ အသုံးပြုခဲ့ပါတယ်။
+
+---
 
 ### 4. Workspace Cleanup Strategy
 
