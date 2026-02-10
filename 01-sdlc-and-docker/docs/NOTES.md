@@ -25,16 +25,16 @@ First of all, I came to understand the software development lifecycle with seque
 
 ```bash
 # Stop existing container
-docker stop <container_id_or_name> || true
+docker stop <CONTAINER_ID_OR_NAME> || true
 
 # Remove existing container
-docker rm <container_id_or_name> || true
+docker rm <CONTAINER_ID_OR_NAME> || true
 
 # Build from Dockerfile
-docker build -t <app-name> .
+docker build -t <APP_NAME> .
 
 # Run a container
-docker run -d --name <container_id_or_name> -p 3000:5000 <app-name>
+docker run -d --name <CONTAINER_ID_OR_NAME> -p 3000:5000 <APP_NAME>
 
 # Docker Compose magic
 docker-compose up -d

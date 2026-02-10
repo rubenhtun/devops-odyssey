@@ -104,4 +104,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 ### Pro Tip
 
-Always check your container health using `docker inspect --format='{{json .State.Health}}' <container_id>`. It gives you the exact error message and exit code from your health check script, making debugging 10x faster!
+Always check your container health using `docker inspect --format='{{json .State.Health}}' <CONTAINER_ID>`. It gives you the exact error message and exit code from your health check script, making debugging 10x faster!

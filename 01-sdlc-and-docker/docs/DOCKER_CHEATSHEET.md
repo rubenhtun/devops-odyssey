@@ -16,7 +16,7 @@ docker images
 
 # `rmi` ဆိုတာက remove image ရဲ့ အတိုကောက်ပါ။
 # ကိုယ်ဖျက်ချင်တဲ့ image ကို image ID နဲ့ဖြစ်ဖြစ်၊ name နဲ့ဖြစ်ဖြစ် ဖျက်လို့ရပါတယ်။
-docker rmi <image_id_or_name>
+docker rmi <IMAGE_ID_OR_NAME>
 ```
 
 ---
@@ -41,13 +41,13 @@ docker ps
 docker ps -a
 
 # လက်ရှိ run ဖြစ်နေတဲ့ container တစ်ခုကို ရပ်တန့်ချင်ရင်တော့ 'stop' ကို သုံးရုံပါပဲ။
-docker stop <container_id_or_name>
+docker stop <CONTAINER_ID_OR_NAME>
 
 # အရင်က ရပ်ထားခဲ့တဲ့ container တစ်ခုကို ပြန်အသုံးပြုချင်တဲ့အခါ 'start' command ကို သုံးလိုက်ရုံပါပဲ။
-docker start <container_id_or_name>
+docker start <CONTAINER_ID_OR_NAME>
 
 # အလုပ်မလုပ်တော့တဲ့ ဒါမှမဟုတ် ရပ်ထားပြီးသား container တစ်ခုကို စနစ်ထဲကနေ လုံးဝအပြီးအပိုင် ဖယ်ရှားပစ်ဖို့အတွက်ပါ။
-docker rm <container_id_or_name>
+docker rm <CONTAINER_ID_OR_NAME>
 ```
 
 ---
@@ -57,16 +57,16 @@ docker rm <container_id_or_name>
 ```bash
 # ပုံမှန်အားဖြင့်ဆိုရင် container တစ်ခု အလုပ်လုပ်နေတဲ့အချိန်မှာ ထွက်လာတဲ့ output logs တွေဆိုတာ ရှိပါတယ်။
 # အဲ့ဒီ logs တွေကို ကြည့်ဖို့အတွက်ဆိုရင် ဒီ command ကိုပဲ သုံးပါတယ်။
-docker logs <container_id_or_name>
+docker logs <CONTAINER_ID_OR_NAME>
 
 # Container run နေတဲ့အချိန်မှာပဲ အထဲကို terminal ပုံစံနဲ့ တိုက်ရိုက်ဝင်ပြီး
 # command တွေကို ကိုယ်တိုင် run လုပ်ချင်တဲ့အခါမျိုးမှာ သုံးဖို့အတွက်ပါ။
-docker exec -it <container_id_or_name> /bin/bash
+docker exec -it <CONTAINER_ID_OR_NAME> /bin/bash
 
 # Container နဲ့ဆိုင်တဲ့ configuration, network, volume စသဖြင့်
 # အသေးစိတ် အချက်အလက်တွေကို JSON format ပုံစံနဲ့
 # တစ်စုတစ်စည်းတည်း ကြည့်ဖို့လိုလာတဲ့အခါ 'inspect' command ကို မမေ့ဖို့ပါပဲ။
-docker inspect <container_id_or_name>
+docker inspect <CONTAINER_ID_OR_NAME>
 ```
 
 ---

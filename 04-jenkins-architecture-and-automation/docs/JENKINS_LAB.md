@@ -14,7 +14,7 @@ docker-compose up -d
 docker ps
 
 # Docker container ထဲကို စဝင်ပါမယ်။
-docker exec -it <container_name> bash
+docker exec -it <CONTAINER_NAME> bash
 
 # root access ရပြီဆိုရင် ဒီ command သုံးပြီး Jenkins home directory ထဲ ဝင်လို့ရပါပြီ။
 ls /var/jenkins_home

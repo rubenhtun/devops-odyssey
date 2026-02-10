@@ -10,7 +10,7 @@
 
 - **Ngrok Tunnel:** `ngrok http 8080`
 - **GitHub Webhook Configuration:**
-  - **Payload URL:** `https://<your-ngrok-url>/github-webhook/`
+  - **Payload URL:** `https://<YOUR_NGROK_URL>/github-webhook/`
   - **Content type:** `application/json`
   - **Trigger:** Just the `push` event.
 

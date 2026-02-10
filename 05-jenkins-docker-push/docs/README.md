@@ -88,19 +88,19 @@ This is the core of the automation. We move from simple commands to a full Docke
 cd 05-jenkins-docker-push
 
 # Build the Docker Image with a unique Build Number
-docker build -t <DOCKER_HUB_USERNAME>/<app-name>:${BUILD_NUMBER} .
+docker build -t <DOCKER_HUB_USERNAME>/<APP_NAME>:${BUILD_NUMBER} .
 
 # Tag the image as 'latest' for production use
-docker tag <DOCKER_HUB_USERNAME>/<app-name>:${BUILD_NUMBER} <DOCKER_HUB_USERNAME>/<app-name>:latest
+docker tag <DOCKER_HUB_USERNAME>/<APP_NAME>:${BUILD_NUMBER} <DOCKER_HUB_USERNAME>/<APP_NAME>:latest
 
 # Login to Docker Hub using Non-Interactive Mode
 echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 
 # Push both Versioned and Latest images to the Registry
-docker push <DOCKER_HUB_USERNAME>/<app-name>:${BUILD_NUMBER}
-docker push <DOCKER_HUB_USERNAME>/<app-name>:latest
+docker push <DOCKER_HUB_USERNAME>/<APP_NAME>:${BUILD_NUMBER}
+docker push <DOCKER_HUB_USERNAME>/<APP_NAME>:latest
 
 # Cleanup old containers and run the new version
-docker rm -f <container-name> || true
-docker run -d --name <container-name> -p 5000:5000 <DOCKER_HUB_USERNAME>/<app-name>:latest
+docker rm -f <CONTAINER_NAME> || true
+docker run -d --name <CONTAINER_NAME> -p 5000:5000 <DOCKER_HUB_USERNAME>/<APP_NAME>:latest
 ```
