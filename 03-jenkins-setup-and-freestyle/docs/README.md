@@ -1,8 +1,8 @@
-# Project Documentation
+# Lab Documentation
 
 ## Overview
 
-This project demonstrates setting up a Jenkins CI/CD pipeline using Docker containers with Docker-out-of-Docker (DooD) architecture.
+If saying in an articulated way, a Jenkins CI/CD pipeline is a continuous, automated process, particularly focused on boosting development agility using Docker containers and orchestration. In this lab, Docker-out-of-Docker is the main key feature to learn about, and what it is used for. Moreover, some hands-on work, like environment setup, launching the container, unlocking Jenkins, initial configuration, and installing the Docker CLI inside Jenkins are covered, but it's just so-so.
 
 ## Prerequisites
 
@@ -14,23 +14,24 @@ This project demonstrates setting up a Jenkins CI/CD pipeline using Docker conta
 
 ## 1. Jenkins Infrastructure Setup
 
-Through the infrastructure diagram below, we can understand how the Jenkins container communicates with our host OS.
+As we see, the developer must communicate with the host machine os to see the Jenkins dashboard interface via a port number. Jenkins server container running in Docker Engine always tries to build other containers relying on socket mounting like a tunnel, and saves persistent volume data into the Jenkins home folder.
 
 ![Jenkins Infrastructure](diagrams/jenkins-infrastructure.svg)
 
 ## 2. Docker-out-of-Docker (DooD) Sequence
 
-From within the Jenkins container, the Docker CLI sends API requests to the host's Docker daemon via a mounted socket.
+Next step, going into details a bit, the Docker CLI from within the Jenkins container sends API requests to the host's Docker daemon via a mounted socket. Like already explained before, socker two-way communicator serves as a medium catalyst to forward Docker Daemon, where main executions occur, and backward Docker CLI to show final results.
 
 ![DooD Flow](diagrams/dood-communication-flow.svg)
 
 ## 3. Freestyle Job Workflow
 
-This diagram illustrates the continuous integration (CI) process on Jenkins, which pulls code from GitHub and ultimately builds a Docker image.
+Be brave for repetitions. And be brave for the little unknown. Now our focus is on how Jenkins actually does the work. When we trigger a tangible click on the "build" button, the autopilot, Jenkins make auto awakening of a freestyle job. First step, reach out to there, GitHub to pull all the latest source code into its workspace and download it. After that, Jenkins starts multiple remaining build steps as configured in the job. The steps include running tests, compiling code, building a Docker image, push image to Docker Hub, and so on. Finally, it cleans up workspace for the next build and sends notifications to the developer.
 ![Build Workflow](diagrams/freestyle-job-workflow.svg)
 
 ## 4. CI/CD Pipeline Roadmap
 
+After reading all the above, you may wonder what's next? But don't worry because this is just a simple CI/CD pipeline roadmap. In the next labs, you will learn more about how this pipeline stages work in detail through hard codes line by line.
 ![Pipeline Roadmap](diagrams/cicd-pipeline-roadmap.svg)
 
 ---
@@ -41,9 +42,9 @@ This diagram illustrates the continuous integration (CI) process on Jenkins, whi
 
 ---
 
-## 6. Jenkins Lab Cheatsheet
+## 6. Jenkins Cheatsheet
 
-[View Jenkins Lab Sheets](JENKINS_LAB.md)
+[View Jenkins Cheatsheet](JENKINS_LAB.md)
 
 ---
 
