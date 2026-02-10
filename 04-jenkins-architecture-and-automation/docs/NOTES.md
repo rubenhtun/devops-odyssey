@@ -61,15 +61,6 @@ rm -rf /var/jenkins_home/workspace/<JOB_NAME>/*
 
 ---
 
-- Architecture: Jenkins Controller running in Docker with distributed agent capability
-- Automation Trigger: Poll SCM checking GitHub every 2 minutes (H/2 * * * *)
-- Parameters: BRANCH_NAME parameter for dynamic branch selection
-- Git Integration: Branch specifier using */${BRANCH_NAME} for flexible builds
-- Build Tool: Freestyle job with Execute Shell scripts
-- Persistence: jenkins_home volume for configuration and job history
-
----
-
 ## Here's What I Actually Did
 
 ### Stage 1: Exploring Jenkins Home Structure
