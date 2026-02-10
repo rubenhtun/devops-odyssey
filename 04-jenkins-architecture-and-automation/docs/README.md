@@ -1,32 +1,40 @@
-# Project Documentation
+# Lab Documentation
 
 ## Overview
 
-This project demonstrates advanced Jenkins automation setup, focusing on CI/CD pipeline implementation using parameters, automation triggers, and Git integration.
+This lab covers advanced Jenkins automation setup, focusing on implementing a CI/CD pipeline using parameters, automation triggers, and Git integration.
 
 ## Prerequisites
 
 - Docker and Docker Compose installed (as per Lab 3).
-- Git installed with essential branches: `feature`, `develop`, and `main`.
+- Git installed with essential branches: `feature-login`, `develop`, and `main`.
 - Basic understanding of CI/CD concepts.
 
 ---
 
 ## 1. Jenkins Home Structure
 
-Even though Jenkins runs inside a Docker container, it relies heavily on its internal file system to keep everything organized. Think of the `/var/jenkins_home` directory as the foundation; folders like `config` and `jobs` aren't just storage spaces—they are essential components that maintain the server's settings and keep track of every project's history.
+What is the meaning of home? what's your definition of home? What's are basic criteria to define a home?
+
+Now, let's go back to the topic. Actually, Jenkins also has a home. It's the `/var/jenkins_home` directory. But Jenkins is running inside a Docker container. So, we can understand it can not fully control and manage other things outside its home. However, Jenkins also has its own internal file system to keep everything organized. Think of it like the `/var/jenkins_home` directory as the foundation. On the other hand, folders like `config` and `jobs` are also essential components that maintain the server's settings and keep track of every project's history.
 
 ![Jenkins Home Structure](diagrams/jenkins-home-structure.svg)
 
+---
+
 ## 2. Automation Workflow
 
-The magic of automation starts the moment a developer pushes code to a repository like GitHub. This action alerts the Jenkins server that something has changed. From there, the Jenkins Controller takes over, guiding its workspace agents to pull the latest code and transform it into a finished product, or "artifact," without any manual intervention.
+Magic is not only about wizardry or what we see in movies. In tech industry, all about automation can be seen as magic either. Right? That's my POV.
+
+So, what is the magic of automation? The Jenkins automation starts when a developer pushes code to a private or public repository, on GitHub. This action alerts the Jenkins server that something has changed very soon. From there, the Jenkins Controller takes over, guiding its workspace agents to pull the latest code and transform it into a finished product, or artifact without any manual intervention.
 
 ![Automation Workflow](diagrams/jenkins-automation-workflow.svg)
 
+---
+
 ## 3. Distributed Architecture
 
-We can think of the Distributed Architecture as a "Brain and Hands" setup. The Jenkins Controller acts as the brain—handling the logic, scheduling, and management while the Agent Nodes act as the hands. These agents do the heavy lifting, like running shell scripts, building Docker images, and executing tests. This division of labor ensures that the system stays fast and efficient, even when handling multiple tasks at once.
+We can think of the Distributed Architecture as a "Brain and Hands" setup. The Jenkins Controller performs like a brain—handling part for logic, scheduling, and management of the whole system meanwhile the Agent Nodes act as moveable hands. These agents mainly do the heavy lifting, like running shell scripts, building Docker images, and executing tests. Like an example a boss delegates tasks to his employees. The boss will not do everything by himself, right? If he does, he will get tired and burned out. So, the division of labor ensures that the system stays fast and efficient, even when handling multiple tasks at once.
 
 ![Distributed Architecture](diagrams/jenkins-distributed-architecture.svg)
 
@@ -40,7 +48,7 @@ We can think of the Distributed Architecture as a "Brain and Hands" setup. The J
 
 ## 5. Jenkins Lab Cheatsheet
 
-[View Jenkins Lab Sheets](JENKINS_LAB.md)
+[View Jenkins Lab Cheatsheet](JENKINS_LAB.md)
 
 ---
 
