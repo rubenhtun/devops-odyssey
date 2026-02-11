@@ -6,7 +6,7 @@ This lab elevates our CI/CD game by moving from manual Freestyle configurations 
 
 ## Prerequisites
 
-- **All Day 5 Prerequisites** (Docker, Jenkins, GitHub account).
+- **Lab 5 Prerequisites** (Docker, Jenkins, GitHub account).
 - **Jenkins Pipeline Plugin** installed.
 - **Docker Hub Credentials** saved in Jenkins as `docker-hub-creds`.
 - A basic understanding of **Groovy syntax** used in Jenkins Declarative Pipelines.
