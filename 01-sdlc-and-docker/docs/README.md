@@ -59,7 +59,7 @@ Thus, this diagram highlights how it coordinates the web app and database, sets 
 
 ## 6. Docker Cheatsheet
 
-[View Docker Sheets](DOCKER_CHEATSHEET.md)
+[View Docker Cheatsheet](DOCKER_CHEATSHEET.md)
 
 ---
 

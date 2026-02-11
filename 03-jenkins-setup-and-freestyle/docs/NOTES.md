@@ -2,7 +2,7 @@
 
 ## What This Lab Is About
 
-So I have come across Labs 1 and 2 successfully and actively far. Now it's time to jump into another critical turning point. Both Labs 1 and 2 taught me to an extent about containerizing apps and understanding the CI/CD pipeline concept simply. My dogged mindset is feeling never enough at any sort of learning journey, thirsty for new implementation challenges above all theories which make me vague and unclear.
+So I have come across Labs 1 and 2 successfully and actively so far. Now it's time to jump into another critical turning point. Both Labs 1 and 2 taught me to an extent about containerizing apps and understanding the CI/CD pipeline concept simply. My dogged mindset is feeling never enough at any sort of learning journey, thirsty for new implementation challenges above all theories which make me vague and unclear.
 
 Along with me, the question is how to automate the entire CI/CD process? Not just theoretically understand it, but how to really happen based on Jenkins, a system where code changes automatically trigger builds, tests, and deployments without me clicking buttons manually?
 
@@ -117,6 +117,6 @@ Honestly say that Docker-out-of-Docker (DooD) pattern seemed confusing at first.
 - Push images to registries
 - Run containers on the host
 
-It's not that Jenkins is running and managing Docker internally. Jenkins has just reliable permission to talk to the host's Docker engine serving as a local tool. This way becomes much simpler than traditional Docker-in-Docker solutions.
+It's not that Jenkins is running and managing Docker internally. Jenkins just has reliable permission to talk to the host's Docker engine serving as a local tool. This way becomes much simpler than traditional Docker-in-Docker solutions.
 
 **Pro tip:** Make sure Docker CLI is properly installed inside Jenkins before running your first build. The error `docker: not found` means you skipped the CLI installation step, which is easy and unnoticeable to overlook!

@@ -91,12 +91,12 @@ Why: As a lazy man, I often seek an alternative, convenient way. I love this quo
 
 Action: Use Jenkins' built-in environment variables to make build scripts dynamic and informative.
 How: Used variables like ${BUILD_NUMBER}, ${WORKSPACE}, and ${BRANCH_NAME} in Execute Shell scripts to display some build context.
-Why: Easy to trace where and what bad scenario has happened. So, these environment variables help me debuggable through reading each scenario.
+Why: Easy to trace where and what bad scenario has happened. So, these environment variables help me debug through reading each scenario.
 
 ### Stage 6: Understanding Workspace Cleanup Strategy
 
-Action: Learned when and how to clean up workspace directories after builds. How: Explored the workspace folder structure and understood that code accumulates after each build and became much messy.
-Why: Almost everything on earth has trade off, haha. The same applies to workspaces, which can consume significant disk space over time, especially with frequent builds. So, cleanup is a part of duty. But one thing I keep in mind is that I have to push artifacts to a safe registry first before cleaning the workspace. If not, I'll lose my build outputs.
+Action: Learned when and how to clean up workspace directories after builds. How: Explored the workspace folder structure and understood that code accumulates after each build and becomes very messy.
+Why: Almost everything on earth has trade-off, haha. The same applies to workspaces, which can consume significant disk space over time, especially with frequent builds. So, cleanup is a part of duty. But one thing I keep in mind is that I have to push artifacts to a safe registry first before cleaning the workspace. If not, I'll lose my build outputs.
 
 ---
 

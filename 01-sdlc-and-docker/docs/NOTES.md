@@ -4,7 +4,7 @@
 
 As a developer, I crave doing practical things to grasp nested concepts through experience, and that's accounted for. So as you know, the first step in anything new in our life seems awkward to everyone. Right? But we are always supposed to seek alternative approaches to critically solve problems through a self-constructive mindset.
 
-And then, frankly saying that one of my passionate habits is going to deep dive into system architecture and building. Therefore, to an extent, some amount of experiments in terms of DevOps meni series of labs using Docker and Jenkins tools are conducted based on my authentic decision.
+And then, frankly saying that one of my passionate habits is going to deep dive into system architecture and building. Therefore, to an extent, some amount of experiments in terms of DevOps mini series of labs using Docker and Jenkins tools are conducted based on my authentic decision.
 
 First of all, I came to understand the software development lifecycle with sequential processes easily leads to fully completed and systematic software that reaches end users. Especially I got a great chance to learn how containers solve the "works on my machine" problem.
 
@@ -78,7 +78,7 @@ docker-compose ps
 
 ### Step 4: Automate with Scripts
 
-**Action**: Easy peasy separated additional `deploy.sh` for one short command line deployments  
+**Action**: Easy peasy, separated additional `deploy.sh` for one short command line deployments  
 **How**: Listed multiple Docker commands into a single script file  
 **Why**: Because it saves time and avoids mistakes from typing hard-coded commands manually
 

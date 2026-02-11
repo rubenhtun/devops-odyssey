@@ -57,7 +57,7 @@ git merge feature/branch-name
 ### Stage 1: Understanding Version Control & Branching
 
 **Action**: Explored how Git manages code versions and enables team collaboration.
-**How**: Created different branches sucha as feature-login, develop, main and understood the workflow of pushing code and creating pull requests.  
+**How**: Created different branches such as feature-login, develop, main and understood the workflow of pushing code and creating pull requests.  
 **Why**: Multiple developers need to work on different features simultaneously without breaking the main codebase. So Git branches isolate work to developers and merging is the final step after testing.
 
 ### Stage 2: Setting Up the CI/CD Pipeline Foundation
