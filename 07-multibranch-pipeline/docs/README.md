@@ -1,4 +1,4 @@
-# Lab 07: Jenkins Multibranch Pipeline
+# Lab Documentation
 
 ## Overview
 
