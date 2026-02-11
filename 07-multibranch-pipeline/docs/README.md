@@ -45,13 +45,13 @@ This shows the full production line from raw materials (code) to finished produc
 
 ## 4. Lab Notes
 
-[View Lab 07 Notes](NOTES.md)
+[View Lab Notes](NOTES.md)
 
 ---
 
 ## 5. Jenkins Lab Cheatsheet
 
-[View Lab 07 Jenkinsfile](JENKINS_LAB.md)
+[View Jenkins Lab Cheatsheet](JENKINS_LAB.md)
 
 ---
 

@@ -31,7 +31,7 @@ Think of the Pipeline as a relay race. Each stage—**Checkout, Build, Push, and
 
 ## 3. Image Versioning & Tagging Strategy
 
-We don't just overwrite our images; we archive them. Every time Jenkins runs a build, it stamps the image with a unique **Build Number**. At the same time, it updates the `latest` tag to point to this new version. This gives us the best of both worlds: our production server always pulls the `latest`, but we keep a history of every version in case we need to travel back in time to fix a bug.
+We don't just overwrite our images. We archive them. Every time Jenkins runs a build, it stamps the image with a unique **Build Number**. At the same time, it updates the `latest` tag to point to this new version. This gives us the best of both worlds: our production server always pulls the `latest`, but we keep a history of every version in case we need to travel back in time to fix a bug.
 
 ![Tagging Strategy](diagrams/tagging-strategy.svg)
 
@@ -45,7 +45,7 @@ We don't just overwrite our images; we archive them. Every time Jenkins runs a b
 
 ## 5. Jenkins Lab Cheatsheet
 
-[View Jenkins Lab Sheets](JENKINS_LAB.md)
+[View Jenkins Lab Cheatsheet](JENKINS_LAB.md)
 
 ---
 
