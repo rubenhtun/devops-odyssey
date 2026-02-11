@@ -15,7 +15,7 @@ This lab evolves our CI/CD architecture by moving from a single-pipeline model t
 
 ## 1. Branch-to-Port Highway System
 
-**Think of it like:** A city's highway system where different branches get their own dedicated lanes.
+For example, a city's highway system where different branches get their own dedicated lanes.
 
 This diagram shows how each Git branch gets its own "lane" (port) on your server. Just like how emergency vehicles, buses, and regular cars have different lanes, your `main`, `develop`, and `feature` branches each run on separate ports (5000, 5001, 5002). This prevents traffic jams and lets you test multiple versions simultaneously without them crashing into each other.
 
@@ -25,8 +25,6 @@ This diagram shows how each Git branch gets its own "lane" (port) on your server
 
 ## 2. Jenkins Family Tree Structure
 
-**Think of it like:** A company organizational chart where the CEO has department managers.
-
 Jenkins organizes your project like a family tree. The "Multibranch Project" is the parent, and each branch becomes its own child job with independent build history. This means `main`, `develop`, and `feature-login` each have their own workspace, logs, and success/failure tracking - just like different departments in a company tracking their own projects.
 
 ![](diagrams/jenkins-hierarchy.svg)
@@ -34,8 +32,6 @@ Jenkins organizes your project like a family tree. The "Multibranch Project" is 
 ---
 
 ## 3. Complete CI/CD Assembly Line
-
-**Think of it like:** An automated car factory assembly line.
 
 This shows the full production line from raw materials (code) to finished product (running app). Code comes from GitHub → gets assembled by Jenkins → packaged into Docker containers → shipped to Docker Hub → finally delivered to specific ports on your server. Each step happens automatically, just like how a car moves through different factory stations.
 
