@@ -12,7 +12,7 @@ A hands-on journey through the core concepts of software delivery, from Docker b
 | **04** | **Jenkins Architecture** | Exploring Jenkins home structure, workspaces, and distributed agent concepts. |
 | **05** | **Docker Push Pipeline** | Building a manual pipeline to build, tag, and push images to production. |
 | **06** | **Pipeline as Code** | Moving to `Jenkinsfile` for version-controlled, automated Declarative Pipelines. |
-| **07** | **Multibranch Pipeline** | Automating multiple branches (main, develop, feature) with dynamic environments. |
+| **07** | **Multibranch Pipeline** | Automating multiple branches (main, develop, feature-login) with dynamic environments. |
 | **08** | **Webhooks Automation** | Achieving true CI/CD with GitHub Webhooks, Ngrok, and native Health Checks. |
 
 ## 🛠️ Tech Stack
