@@ -22,7 +22,7 @@ As we see, the developer must communicate with the host machine os to see the Je
 
 ## 2. Docker-out-of-Docker (DooD) Sequence
 
-Next step, going into details a bit, the Docker CLI from within the Jenkins container sends API requests to the host's Docker daemon via a mounted socket. Like already explained before, socker two-way communicator serves as a medium catalyst to forward Docker Daemon, where main executions occur, and backward Docker CLI to show final results.
+Next step, going into details a bit, the Docker CLI from within the Jenkins container sends API requests to the host's Docker daemon via a mounted socket. Like already explained before, socket two-way communicator serves as a medium catalyst to forward Docker Daemon, where main executions occur, and backward Docker CLI to show final results.
 
 ![DooD Flow](diagrams/dood-communication-flow.svg)
 

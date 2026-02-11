@@ -6,7 +6,7 @@ Alright, so here's the thing. If we reflect back in Lab 01, we learned how to bu
 
 This is why Git and CI/CD concepts come into play. I rather say that Git is actually our **source control team manager** who can track of every single change we make to our codebase. So, how about CI/CD? It's like an **automated assembly line** that takes all our code changes and regularly builds, tests, and deploys them without us having to manually type commands over and over again.
 
-In this lab, we're learning how Git and CI/CD work conceptually with just flow diagrams, not abosolute practically because I just added some additional lines of Docker Compose and commands. However, we should know in advance CI/CD orchestrates this beautiful automation before jumping into upcoming labs. From the moment you `git push` new code changes, a pipeline awakens himself impulsively: it fetches your changes, builds a Docker container, runs tests, and deploys it to your environment. No manual intervention needed anymore.
+In this lab, we're learning how Git and CI/CD work conceptually with just flow diagrams, not absolute practically because I just added some additional lines of Docker Compose and commands. However, we should know in advance CI/CD orchestrates this beautiful automation before jumping into upcoming labs. From the moment you `git push` new code changes, a pipeline awakens himself impulsively: it fetches your changes, builds a Docker container, runs tests, and deploys it to your environment. No manual intervention needed anymore.
 
 ## Prerequisites
 
