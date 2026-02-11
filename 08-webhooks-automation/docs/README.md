@@ -50,7 +50,7 @@ Simply checking if a container is "Up" is not enough. The process might be runni
 
 ## 6. Lab Notes
 
-[View Lab 08 Notes](NOTES.md)
+[View Lab Notes](NOTES.md)
 
 ---
 
