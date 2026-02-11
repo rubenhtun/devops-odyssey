@@ -2,7 +2,7 @@
 
 ## Overview
 
-This lab elevates our CI/CD game by moving from manual Freestyle configurations to **Pipeline as Code**. Using a `Jenkinsfile` checked into GitHub, we automate the entire lifecycle—cleaning the workspace, building unique versioned images, and deploying to production—ensuring our process is as version-controlled as our code.
+So far, we have been dealing with manual Freestyle configurations. In this lab, it's time to level up to **Pipeline as Code**. By using a `Jenkinsfile` checked into GitHub, we can now automate the entire lifecycle—from cleaning the workspace and building unique versioned images to deploying them to production. This ensures our process is as version-controlled as our code.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ This lab elevates our CI/CD game by moving from manual Freestyle configurations 
 
 ## 1. CI/CD Architecture Overview
 
-We've built a "Digital Assembly Line." Instead of Jenkins just following a list of manual steps, he now reads a **Manifesto** (the `Jenkinsfile`) that tells him exactly how to handle the code from the moment it leaves the Developer's desk until it hits the Production server. It’s a seamless hand-off between GitHub, Jenkins, Docker Hub, and our running App.
+We've built a "Digital Assembly Line." Instead of Jenkins just following a list of manual steps, he now reads a **Manifesto**, the `Jenkinsfile`, that tells him exactly how to handle the code from the moment it leaves the Developer's desk to the Production server. It’s a seamless hand-off between GitHub, Jenkins, Docker Hub, and our running App.
 
 ![CI/CD Overview](diagrams/cicd-overview.svg)
 
@@ -23,7 +23,7 @@ We've built a "Digital Assembly Line." Instead of Jenkins just following a list 
 
 ## 2. Jenkins Pipeline Stages
 
-Think of the Pipeline as a relay race. Each stage—**Checkout, Build, Push, and Deploy**—must pass the baton successfully to the next. If the "Build" runner trips, the "Push" runner never starts. This "Fail-Fast" approach ensures that broken code never reaches our users. We've also added a "Cleanup" stage to start every race with a fresh track.
+Think of the Pipeline as a relay race of runners. Each stage—**Checkout, Build, Push, and Deploy**—must pass the baton successfully to the next runner. If the "Build" runner trips, the "Push" runner never starts. This "Fail-Fast" approach ensures that broken code never reaches our users. We've also added a "Cleanup" runner to start every race with a fresh track.
 
 ![Pipeline Stages](diagrams/pipeline-stages.svg)
 
@@ -31,7 +31,7 @@ Think of the Pipeline as a relay race. Each stage—**Checkout, Build, Push, and
 
 ## 3. Image Versioning & Tagging Strategy
 
-We don't just overwrite our images. We archive them. Every time Jenkins runs a build, it stamps the image with a unique **Build Number**. At the same time, it updates the `latest` tag to point to this new version. This gives us the best of both worlds: our production server always pulls the `latest`, but we keep a history of every version in case we need to travel back in time to fix a bug.
+We don't just overwrite our images. We archive them. Every time Jenkins runs a build, it stamps the image with a unique **Build Number**. At the same time, it updates the `latest` tag to point to this new version. This gives us the best of both worlds: our production server always pulls the `latest` image to run, but we keep a history of every version in case we need to travel back in time to fix a bug.
 
 ![Tagging Strategy](diagrams/tagging-strategy.svg)
 
