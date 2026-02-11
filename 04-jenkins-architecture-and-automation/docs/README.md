@@ -14,7 +14,8 @@ This lab covers advanced Jenkins automation setup, focusing on implementing a CI
 
 ## 1. Jenkins Home Structure
 
-What is the meaning of home? what's your definition of home? What's are basic criteria to define a home?
+
+What is the meaning of home? what's your definition of home? What are basic criteria to define a home?
 
 Now, let's go back to the topic. Actually, Jenkins also has a home. It's the `/var/jenkins_home` directory. But Jenkins is running inside a Docker container. So, we can understand it can not fully control and manage other things outside its home. However, Jenkins also has its own internal file system to keep everything organized. Think of it like the `/var/jenkins_home` directory as the foundation. On the other hand, folders like `config` and `jobs` are also essential components that maintain the server's settings and keep track of every project's history.
 
