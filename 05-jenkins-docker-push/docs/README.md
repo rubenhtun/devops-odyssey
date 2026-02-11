@@ -50,7 +50,7 @@ Think of Git commits as a timeline of snapshots, where each commit captures the 
 
 ## 5. Jenkins Lab Cheatsheet
 
-[View Jenkins Lab Sheets](JENKINS_LAB.md)
+[View Jenkins Lab Cheatsheet](JENKINS_LAB.md)
 
 ---
 
