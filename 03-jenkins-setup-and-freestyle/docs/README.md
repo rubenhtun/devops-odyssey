@@ -48,9 +48,9 @@ After reading all the above, you may wonder what's next? But don't worry because
 
 ---
 
-## 6. Jenkins Cheatsheet
+## 6. Jenkins Lab Cheatsheet
 
-[View Jenkins Cheatsheet](JENKINS_LAB.md)
+[View Jenkins Lab Cheatsheet](JENKINS_LAB.md)
 
 ---
 
