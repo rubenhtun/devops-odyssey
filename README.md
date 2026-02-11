@@ -34,4 +34,4 @@ A hands-on journey through the core concepts of software delivery, from Docker b
 
 ---
 
-*Built with ❤️ for curious learners.*
+*Disclaimer: I know I committed some conceptual repetitions over and over again, lol. Please don't mind me. But I built with ❤️ for curious learners, mainly beginners.*
