@@ -10,7 +10,7 @@ In Lab 07, we mastered branch management. In Lab 08, we achieved **True Automati
 
 - **Webhooks**: A "push notification" from GitHub to Jenkins to trigger builds immediately upon code changes.
 - **Ngrok Tunneling**: Creating a secure public URL for my local Jenkins server so GitHub can "see" it over the internet.
-- **Native Health Checks**: A internal script (`health-check.js`) that runs inside the container to monitor if the Flask app is actually responding.
+- **Native Health Checks**: An internal script (`health-check.js`) that runs inside the container to monitor if the Flask app is actually responding.
 - **Multi-stage Builds**: Using a "Builder" image to compile dependencies and a "Final" slim image to run the app, reducing image size significantly.
 
 ### Commands & Configs

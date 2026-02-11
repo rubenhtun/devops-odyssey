@@ -61,7 +61,7 @@ docker run -d --name ${APP_NAME} -p 5000:5000 ${DOCKER_HUB_USERNAME}/${APP_NAME}
 ### Step 3: Automated the "Build & Tag" Relationship
 
 **Action**: Tagged images with both the Jenkins build number and `latest`.
-**Why**: T"The build number helps me track code history easily—like 'What changed in build #47?'—while the `latest` tag simplifies deployment."
+**Why**: The build number helps me track code history easily—like 'What changed in build #47?'—while the `latest` tag simplifies deployment."
 
 ### Step 4: Scripted the Perfect Deployment
 
