@@ -30,8 +30,8 @@ A hands-on journey through the core concepts of software delivery, from Docker b
     git clone https://github.com/rubenhtun/devops-odyssey.git
     cd devops-odyssey
     ```
-2.  Navigate to any lab folder (e.g., `01-sdlc-and-docker`) and check its `README.md` for specific instructions.
+2.  Navigate to any lab folder (e.g., `01-sdlc-and-docker`) and check its `README.md`, `DOCKER_CHEATSHEET.md`, `JENKINS_LAB.md`, `NOTES.md`, and `diagrams` for specific instructions.
 
 ---
 
-*Disclaimer: I know I committed some conceptual repetitions over and over again, lol. Please don't mind me. But I built with ❤️ for curious learners, mainly beginners.*
+*Disclaimer: I know I committed some conceptual repetitions over and over again, lol. Please don't mind me about that. But I built with ❤️ for curious learners, mainly beginners.*
