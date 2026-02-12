@@ -60,33 +60,33 @@ docker-compose ps
 
 ### Step 1: Understand SDLC (The Big Picture)
 
-**Action**: Initially, learned the eight stages of software development  
-**How**: From "Requirements" gathering to ongoing "Operation" and "Feedback"  
-**Why**: The reason to understand what specific parts we can automate in the development process with the help of DevOps tools
+**Action**: Initially, learned the eight stages of software development.  
+**How**: From "Requirements" gathering to ongoing "Operation" and "Feedback".  
+**Why**: The reason to understand what specific parts we can automate in the development process with the help of DevOps tools.
 
 ### Step 2: Build First Docker Container
 
-**Action**: Created a Dockerfile and built a Flask app image  
-**How**: Defined a Python environment, installed Flask, packaged everything in a single folder  
+**Action**: Created a Dockerfile and built a Flask app image.  
+**How**: Defined a Python environment, installed Flask, packaged everything in a single folder.  
 **Why**: Finally, my app runs the same everywhere and no more "works on my machine" issue, good news, right?
 
 ### Step 3: Run & Manage Containers
 
-**Action**: Started containers, mapped ports, checked logs  
-**How**: Used regular `docker run`, `docker ps`, `docker logs` commands  
-**Why**: To actually apply the containers I built and debug in case something is broken
+**Action**: Started containers, mapped ports, checked logs.  
+**How**: Used regular `docker run`, `docker ps`, `docker logs` commands.  
+**Why**: To actually apply the containers I built and debug in case something is broken.
 
 ### Step 4: Automate with Scripts
 
-**Action**: Easy peasy, separated additional `deploy.sh` for one short command line deployments  
-**How**: Listed multiple Docker commands into a single script file  
-**Why**: Because it saves time and avoids mistakes from typing hard-coded commands manually
+**Action**: Easy peasy, separated additional `deploy.sh` for one short command line deployments.  
+**How**: Listed multiple Docker commands into a single script file.  
+**Why**: Because it saves time and avoids mistakes from typing hard-coded commands manually.
 
 ### Step 5: Orchestrate with Docker Compose
 
-**Action**: Built a bridge to set up Flask app + PostgreSQL database together  
-**How**: Created `docker-compose.yml` with services and networks as needed
-**Why**: Real apps usually need multiple components working together
+**Action**: Built a bridge to set up Flask app + PostgreSQL database together.  
+**How**: Created `docker-compose.yml` with services and networks as needed.
+**Why**: Real apps usually need multiple components working together.
 
 ---
 
